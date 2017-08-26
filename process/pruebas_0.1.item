@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" name="Default"/>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;/Applications/TOS_BD-20170623_1246-V6.4.1/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_hX5NgHMEEee3G6NomtyFTg" name="DataOperation"/>
+    <routinesParameter id="_haaWAHMEEee3G6NomtyFTg" name="Mathematical"/>
+    <routinesParameter id="_haiR0HMEEee3G6NomtyFTg" name="Numeric"/>
+    <routinesParameter id="_harbwHMEEee3G6NomtyFTg" name="Relational"/>
+    <routinesParameter id="_haywgHMEEee3G6NomtyFTg" name="StringHandling"/>
+    <routinesParameter id="_ha76cHMEEee3G6NomtyFTg" name="TalendDataGenerator"/>
+    <routinesParameter id="_hbFrcHMEEee3G6NomtyFTg" name="TalendDate"/>
+    <routinesParameter id="_hbTt4HMEEee3G6NomtyFTg" name="TalendStringUtil"/>
+    <routinesParameter id="_hbNAMHMEEee3G6NomtyFTg" name="TalendString"/>
+  </parameters>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5434&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;Agrovizion2&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;postgres&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="/Qo6GZjmi7hJFdv8/sYaJEfIfanNtEE1" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xA;SELECT cb.value,cb.name,cl.address1 as calle, cl.em_fe_numext as numext,cl.em_fe_numint as numint, cl.address2 as colonia,CL.POSTAL, cl.city as localidad,cl.city as ciudad,&#xA;cr.name as estado, cc.name as pais,isshipto&#xA;from c_bpartner cb &#xA;left join c_bpartner_location cbl on cbl.c_bpartner_id = cb.c_bpartner_id and isbillto='Y' &#xA;left join c_location cl on cl.c_location_id = cbl.c_location_id&#xA;left join c_region cr on cr.c_region_id = cl.c_region_id&#xA;left join c_country cc on cc.c_country_id = cl.c_country_id&#xA;where &#xA;cb.value in &#xA;(&#xA;'12121',&#xA;'9605',&#xA;'5121',&#xA;'10694',&#xA;'10974',&#xA;'9294',&#xA;'11507',&#xA;'1903',&#xA;'12610',&#xA;'12877',&#xA;'14361',&#xA;'9297',&#xA;'12880',&#xA;'7408',&#xA;'10983',&#xA;'9295',&#xA;'14406',&#xA;'10988',&#xA;'11001',&#xA;'9305',&#xA;'11508',&#xA;'2252',&#xA;'7488',&#xA;'12612',&#xA;'1974',&#xA;'9304',&#xA;'2378',&#xA;'12887',&#xA;'11511',&#xA;'3509',&#xA;'12613',&#xA;'14414',&#xA;'7509',&#xA;'2554',&#xA;'11510',&#xA;'11016',&#xA;'7507',&#xA;'9308',&#xA;'3494',&#xA;'11509',&#xA;'3507',&#xA;'2923',&#xA;'12614',&#xA;'9321',&#xA;'12615',&#xA;'9329',&#xA;'9327',&#xA;'3599',&#xA;'12903',&#xA;'9330',&#xA;'7518',&#xA;'3598',&#xA;'11019',&#xA;'9368',&#xA;'3512',&#xA;'7426',&#xA;'3567',&#xA;'7553',&#xA;'3627',&#xA;'9417',&#xA;'7538',&#xA;'9416',&#xA;'12616',&#xA;'7519',&#xA;'3612',&#xA;'12908',&#xA;'3614',&#xA;'3604',&#xA;'7545',&#xA;'7527',&#xA;'11031',&#xA;'3738',&#xA;'3743',&#xA;'11584',&#xA;'9418',&#xA;'12618',&#xA;'11041',&#xA;'9419',&#xA;'7581',&#xA;'7472',&#xA;'3741',&#xA;'12619',&#xA;'7569',&#xA;'3742',&#xA;'12918',&#xA;'7593',&#xA;'11044',&#xA;'9442',&#xA;'3758',&#xA;'9445',&#xA;'9449',&#xA;'3756',&#xA;'7591',&#xA;'7654',&#xA;'3767',&#xA;'11053',&#xA;'9459',&#xA;'11048',&#xA;'9462',&#xA;'7491',&#xA;'11590',&#xA;'12923',&#xA;'12624',&#xA;'3759',&#xA;'3766',&#xA;'3764',&#xA;'3768',&#xA;'3763',&#xA;'12625',&#xA;'7658',&#xA;'4464',&#xA;'7662',&#xA;'7656',&#xA;'11068',&#xA;'9470',&#xA;'11646',&#xA;'9465',&#xA;'12927',&#xA;'11644',&#xA;'4494',&#xA;'7655',&#xA;'4673',&#xA;'4664',&#xA;'4682',&#xA;'9477',&#xA;'4630',&#xA;'12627',&#xA;'14433',&#xA;'11649',&#xA;'11648',&#xA;'4628',&#xA;'12932',&#xA;'11074',&#xA;'9486',&#xA;'12628',&#xA;'11653',&#xA;'12630',&#xA;'11650',&#xA;'4692',&#xA;'4704',&#xA;'4705',&#xA;'4706',&#xA;'4697',&#xA;'7779',&#xA;'9488',&#xA;'14437',&#xA;'11112',&#xA;'7798',&#xA;'7826',&#xA;'11113',&#xA;'11666',&#xA;'4707',&#xA;'4708',&#xA;'7806',&#xA;'4716',&#xA;'12634',&#xA;'7941',&#xA;'9513',&#xA;'9510',&#xA;'9512',&#xA;'14438',&#xA;'7936',&#xA;'7879',&#xA;'11667',&#xA;'4728',&#xA;'4771',&#xA;'7942',&#xA;'11668',&#xA;'7952',&#xA;'11120',&#xA;'9517',&#xA;'12636',&#xA;'11129',&#xA;'9531',&#xA;'11672',&#xA;'4786',&#xA;'4788',&#xA;'7946',&#xA;'7943',&#xA;'12637',&#xA;'7959',&#xA;'9533',&#xA;'12638',&#xA;'4814',&#xA;'4980',&#xA;'4892',&#xA;'7988',&#xA;'11674',&#xA;'11673',&#xA;'14443',&#xA;'14445',&#xA;'11677',&#xA;'9538',&#xA;'5113',&#xA;'4992',&#xA;'12640',&#xA;'11675',&#xA;'12639',&#xA;'8000',&#xA;'8008',&#xA;'9536',&#xA;'12985',&#xA;'8009',&#xA;'7795',&#xA;'13394',&#xA;'14747',&#xA;'9540',&#xA;'12642',&#xA;'8015',&#xA;'14447',&#xA;'8013',&#xA;'9541',&#xA;'11682',&#xA;'11684',&#xA;'5189',&#xA;'5191',&#xA;'5254',&#xA;'8023',&#xA;'12643',&#xA;'8039',&#xA;'5231',&#xA;'5586',&#xA;'9545',&#xA;'12644',&#xA;'12990',&#xA;'8029',&#xA;'9544',&#xA;'8026',&#xA;'12992',&#xA;'12647',&#xA;'9551',&#xA;'12648',&#xA;'14465',&#xA;'5378',&#xA;'5321',&#xA;'5309',&#xA;'11697',&#xA;'5395',&#xA;'11699',&#xA;'11698',&#xA;'9555',&#xA;'5379',&#xA;'5341',&#xA;'5440',&#xA;'13024',&#xA;'14466',&#xA;'11704',&#xA;'12649',&#xA;'5447',&#xA;'11703',&#xA;'14468',&#xA;'8100',&#xA;'9560',&#xA;'11701',&#xA;'5475',&#xA;'12654',&#xA;'8125',&#xA;'5844',&#xA;'8101',&#xA;'5809',&#xA;'8112',&#xA;'11706',&#xA;'11708',&#xA;'5587',&#xA;'5746',&#xA;'13031',&#xA;'9564',&#xA;'5846',&#xA;'5597',&#xA;'11713',&#xA;'11709',&#xA;'9570',&#xA;'8138',&#xA;'9569',&#xA;'12683',&#xA;'5854',&#xA;'14476',&#xA;'5859',&#xA;'5857',&#xA;'13041',&#xA;'5848',&#xA;'9568',&#xA;'5851',&#xA;'12685',&#xA;'11717',&#xA;'11718',&#xA;'5860',&#xA;'5877',&#xA;'14480',&#xA;'9576',&#xA;'9571',&#xA;'11714',&#xA;'12688',&#xA;'8183',&#xA;'12687',&#xA;'13046',&#xA;'9579',&#xA;'5876',&#xA;'5861',&#xA;'5879',&#xA;'5880',&#xA;'5878',&#xA;'8195',&#xA;'12690',&#xA;'11720',&#xA;'12689',&#xA;'14481',&#xA;'8354',&#xA;'8215',&#xA;'9582',&#xA;'11724',&#xA;'8276',&#xA;'5952',&#xA;'9583',&#xA;'11719',&#xA;'9586',&#xA;'8358',&#xA;'9584',&#xA;'8518',&#xA;'12697',&#xA;'8356',&#xA;'13089',&#xA;'12695',&#xA;'11726',&#xA;'5955',&#xA;'14485',&#xA;'5967',&#xA;'5969',&#xA;'6118',&#xA;'8536',&#xA;'13098',&#xA;'11731',&#xA;'9592',&#xA;'8520',&#xA;'12699',&#xA;'12698',&#xA;'6171',&#xA;'8555',&#xA;'6119',&#xA;'11729',&#xA;'8531',&#xA;'13130',&#xA;'9591',&#xA;'9596',&#xA;'9595',&#xA;'8558',&#xA;'14501',&#xA;'6177',&#xA;'11733',&#xA;'8610',&#xA;'6235',&#xA;'12702',&#xA;'11738',&#xA;'8556',&#xA;'13110',&#xA;'6236',&#xA;'11744',&#xA;'8611',&#xA;'9598',&#xA;'14502',&#xA;'13111',&#xA;'3757',&#xA;'14590',&#xA;'11211',&#xA;'9724',&#xA;'10394',&#xA;'10357',&#xA;'13805',&#xA;'14506',&#xA;'9795',&#xA;'9288',&#xA;'12713',&#xA;'13121',&#xA;'9603',&#xA;'8682',&#xA;'6318',&#xA;'9606',&#xA;'6320',&#xA;'14510',&#xA;'11745',&#xA;'11747',&#xA;'9602',&#xA;'6369',&#xA;'6337',&#xA;'11750',&#xA;'6372',&#xA;'8748',&#xA;'6340',&#xA;'9607',&#xA;'8751',&#xA;'9609',&#xA;'6338',&#xA;'11749',&#xA;'12714',&#xA;'11748',&#xA;'14514',&#xA;'6349',&#xA;'9620',&#xA;'8788',&#xA;'6377',&#xA;'9616',&#xA;'9610',&#xA;'12716',&#xA;'6439',&#xA;'14515',&#xA;'11753',&#xA;'8754',&#xA;'13140',&#xA;'9619',&#xA;'6524',&#xA;'6441',&#xA;'6693',&#xA;'14517',&#xA;'11757',&#xA;'8812',&#xA;'13151',&#xA;'8834',&#xA;'6442',&#xA;'12725',&#xA;'12724',&#xA;'11754',&#xA;'14516',&#xA;'11755',&#xA;'8803',&#xA;'8919',&#xA;'9627',&#xA;'13161',&#xA;'6541',&#xA;'8920',&#xA;'12729',&#xA;'9625',&#xA;'6567',&#xA;'8868',&#xA;'12732',&#xA;'6553',&#xA;'12728',&#xA;'9629',&#xA;'8926',&#xA;'8928',&#xA;'9642',&#xA;'8932',&#xA;'6788',&#xA;'6804',&#xA;'6778',&#xA;'11771',&#xA;'13181',&#xA;'6793',&#xA;'6772',&#xA;'9632',&#xA;'8930',&#xA;'11767',&#xA;'6870',&#xA;'11774',&#xA;'6842',&#xA;'6878',&#xA;'9652',&#xA;'11772',&#xA;'12739',&#xA;'14522',&#xA;'9649',&#xA;'8936',&#xA;'13184',&#xA;'8938',&#xA;'8947',&#xA;'12742',&#xA;'13189',&#xA;'12749',&#xA;'13187',&#xA;'9653',&#xA;'14524',&#xA;'6953',&#xA;'8943',&#xA;'8944',&#xA;'6955',&#xA;'11798',&#xA;'6897',&#xA;'12757',&#xA;'14527',&#xA;'7003',&#xA;'12755',&#xA;'9667',&#xA;'9668',&#xA;'8958',&#xA;'11814',&#xA;'13191',&#xA;'7040',&#xA;'8960',&#xA;'7025',&#xA;'8964',&#xA;'8963',&#xA;'11825',&#xA;'13193',&#xA;'7053',&#xA;'11815',&#xA;'8965',&#xA;'12766',&#xA;'9672',&#xA;'7100',&#xA;'8961',&#xA;'9671',&#xA;'7133',&#xA;'12773',&#xA;'8967',&#xA;'9682',&#xA;'13206',&#xA;'13201',&#xA;'7141',&#xA;'11832',&#xA;'8969',&#xA;'7143',&#xA;'8970',&#xA;'9673',&#xA;'11844',&#xA;'9683',&#xA;'8978',&#xA;'11852',&#xA;'11861',&#xA;'7165',&#xA;'9684',&#xA;'8977',&#xA;'12778',&#xA;'7184',&#xA;'7193',&#xA;'7183',&#xA;'11874',&#xA;'9693',&#xA;'11864',&#xA;'13226',&#xA;'9009',&#xA;'9051',&#xA;'14541',&#xA;'12786',&#xA;'12781',&#xA;'9698',&#xA;'9687',&#xA;'7198',&#xA;'7197',&#xA;'9706',&#xA;'12795',&#xA;'9708',&#xA;'9554',&#xA;'13233',&#xA;'12769',&#xA;'4811',&#xA;'7515',&#xA;'6263',&#xA;'11088',&#xA;'9628',&#xA;'9703',&#xA;'9092',&#xA;'9099',&#xA;'11899',&#xA;'13234',&#xA;'9112',&#xA;'12810',&#xA;'9111',&#xA;'12721',&#xA;'12700',&#xA;'14566',&#xA;'11512',&#xA;'12921',&#xA;'7385',&#xA;'9717',&#xA;'7365',&#xA;'7360',&#xA;'9714',&#xA;'9720',&#xA;'11683',&#xA;'9115',&#xA;'6536',&#xA;'8797',&#xA;'7393',&#xA;'11725',&#xA;'13176',&#xA;'13238',&#xA;'9142',&#xA;'13237',&#xA;'9140',&#xA;'12824',&#xA;'9154',&#xA;'9153',&#xA;'12944',&#xA;'9155',&#xA;'11020',&#xA;'12302',&#xA;'9733',&#xA;'8942',&#xA;'9732',&#xA;'8135',&#xA;'7600',&#xA;'13247',&#xA;'9152',&#xA;'9150',&#xA;'12828',&#xA;'12844',&#xA;'12837',&#xA;'9747',&#xA;'11973',&#xA;'12754',&#xA;'7663',&#xA;'9744',&#xA;'7599',&#xA;'10787',&#xA;'12841',&#xA;'11689',&#xA;'8054',&#xA;'9162',&#xA;'9168',&#xA;'9164',&#xA;'14582',&#xA;'9784',&#xA;'9171',&#xA;'12845',&#xA;'13262',&#xA;'9473',&#xA;'10771',&#xA;'12003',&#xA;'9735',&#xA;'9174',&#xA;'9184',&#xA;'13914',&#xA;'11082',&#xA;'12848',&#xA;'11990',&#xA;'13255',&#xA;'11664',&#xA;'13263',&#xA;'12736',&#xA;'9812',&#xA;'14585',&#xA;'13249',&#xA;'12009',&#xA;'11453',&#xA;'9660',&#xA;'14421',&#xA;'4982',&#xA;'11669',&#xA;'12309',&#xA;'9189',&#xA;'9621',&#xA;'12823',&#xA;'9798',&#xA;'12025',&#xA;'9190',&#xA;'9196',&#xA;'12863',&#xA;'9197',&#xA;'12050',&#xA;'6424',&#xA;'9799',&#xA;'13911',&#xA;'12090',&#xA;'9669',&#xA;'12041',&#xA;'9841',&#xA;'9200',&#xA;'14589',&#xA;'9214',&#xA;'9218',&#xA;'14598',&#xA;'9886',&#xA;'9906',&#xA;'9894',&#xA;'13286',&#xA;'11665',&#xA;'14422',&#xA;'11483',&#xA;'14591',&#xA;'11829',&#xA;'13283',&#xA;'9212',&#xA;'9892',&#xA;'13284',&#xA;'9958',&#xA;'14599',&#xA;'14603',&#xA;'13293',&#xA;'9936',&#xA;'14472',&#xA;'9740',&#xA;'3736',&#xA;'13265',&#xA;'9932',&#xA;'9227',&#xA;'13301',&#xA;'9229',&#xA;'9233',&#xA;'14609',&#xA;'13294',&#xA;'9982',&#xA;'13318',&#xA;'9271',&#xA;'9981',&#xA;'9986',&#xA;'14612',&#xA;'9251',&#xA;'13302',&#xA;'9241',&#xA;'13313',&#xA;'9247',&#xA;'10740',&#xA;'14610',&#xA;'7134',&#xA;'9983',&#xA;'13277',&#xA;'9243',&#xA;'14615',&#xA;'13324',&#xA;'9275',&#xA;'12633',&#xA;'13329',&#xA;'7704',&#xA;'13142',&#xA;'9284',&#xA;'9996',&#xA;'9274',&#xA;'9987',&#xA;'10051',&#xA;'14619',&#xA;'9293',&#xA;'13342',&#xA;'10056',&#xA;'10058',&#xA;'10054',&#xA;'9666',&#xA;'9291',&#xA;'10057',&#xA;'13343',&#xA;'13358',&#xA;'10062',&#xA;'12310',&#xA;'13359',&#xA;'7504',&#xA;'13349',&#xA;'9453',&#xA;'14629',&#xA;'13355',&#xA;'10066',&#xA;'14626',&#xA;'14630',&#xA;'10065',&#xA;'10063',&#xA;'13386',&#xA;'14737',&#xA;'14633',&#xA;'13379',&#xA;'10085',&#xA;'10072',&#xA;'14563',&#xA;'9427',&#xA;'12770',&#xA;'10070',&#xA;'13377',&#xA;'10073',&#xA;'10071',&#xA;'13365',&#xA;'10091',&#xA;'13391',&#xA;'6507',&#xA;'11758',&#xA;'5096',&#xA;'9280',&#xA;'13412',&#xA;'13393',&#xA;'14735',&#xA;'4694',&#xA;'4775',&#xA;'12646',&#xA;'12617',&#xA;'14752',&#xA;'14746',&#xA;'10092',&#xA;'9221',&#xA;'8166',&#xA;'13910',&#xA;'8971',&#xA;'13427',&#xA;'10095',&#xA;'11480',&#xA;'11040',&#xA;'10093',&#xA;'12797',&#xA;'3732',&#xA;'9466',&#xA;'8833',&#xA;'12005',&#xA;'12626',&#xA;'9537',&#xA;'14778',&#xA;'14764',&#xA;'10133',&#xA;'10100',&#xA;'10123',&#xA;'13433',&#xA;'13442',&#xA;'10134',&#xA;'13437',&#xA;'13443',&#xA;'10125',&#xA;'14776',&#xA;'14769',&#xA;'10126',&#xA;'10261',&#xA;'10146',&#xA;'14807',&#xA;'10241',&#xA;'13456',&#xA;'10147',&#xA;'13452',&#xA;'13460',&#xA;'10249',&#xA;'10150',&#xA;'14800',&#xA;'14780',&#xA;'13444',&#xA;'13445',&#xA;'14810',&#xA;'13468',&#xA;'13465',&#xA;'13463',&#xA;'14822',&#xA;'14817',&#xA;'13467',&#xA;'10282',&#xA;'14825',&#xA;'13461',&#xA;'10266',&#xA;'13479',&#xA;'13474',&#xA;'10324',&#xA;'14835',&#xA;'10319',&#xA;'13472',&#xA;'14827',&#xA;'13477',&#xA;'10320',&#xA;'14834',&#xA;'14836',&#xA;'14846',&#xA;'10330',&#xA;'13505',&#xA;'14842',&#xA;'10345',&#xA;'13485',&#xA;'13502',&#xA;'14837',&#xA;'10331',&#xA;'10328',&#xA;'13490',&#xA;'10329',&#xA;'14852',&#xA;'13510',&#xA;'14848',&#xA;'14847',&#xA;'14860',&#xA;'14855',&#xA;'13508',&#xA;'13506',&#xA;'13507',&#xA;'13509',&#xA;'14873',&#xA;'13521',&#xA;'14872',&#xA;'13517',&#xA;'12635',&#xA;'9193',&#xA;'12301',&#xA;'14471',&#xA;'10726',&#xA;'14365',&#xA;'14874',&#xA;'13516',&#xA;'14862',&#xA;'13528',&#xA;'9840',&#xA;'12835',&#xA;'5441',&#xA;'8557',&#xA;'14865',&#xA;'8187',&#xA;'13536',&#xA;'9443',&#xA;'9546',&#xA;'14887',&#xA;'8003',&#xA;'12306',&#xA;'7786',&#xA;'13526',&#xA;'2067',&#xA;'9169',&#xA;'9298',&#xA;'7196',&#xA;'9484',&#xA;'9306',&#xA;'9654',&#xA;'13556',&#xA;'12710',&#xA;'14893',&#xA;'14896',&#xA;'14888',&#xA;'10060',&#xA;'6888',&#xA;'9985',&#xA;'13697',&#xA;'13559',&#xA;'13558',&#xA;'8067',&#xA;'8019',&#xA;'9225',&#xA;'8352',&#xA;'10763',&#xA;'10725',&#xA;'8359',&#xA;'6718',&#xA;'13781',&#xA;'14900',&#xA;'13724',&#xA;'13713',&#xA;'13715',&#xA;'4245',&#xA;'14916',&#xA;'7336',&#xA;'14915',&#xA;'14909',&#xA;'9637',&#xA;'8571',&#xA;'11730',&#xA;'10809',&#xA;'3571',&#xA;'6844',&#xA;'13702',&#xA;'14578',&#xA;'13728',&#xA;'14611',&#xA;'12928',&#xA;'14933',&#xA;'13731',&#xA;'13557',&#xA;'9599',&#xA;'14940',&#xA;'10971',&#xA;'14917',&#xA;'9939',&#xA;'14928',&#xA;'9650',&#xA;'14939',&#xA;'13736',&#xA;'13734',&#xA;'13288',&#xA;'9219',&#xA;'11711',&#xA;'13729',&#xA;'14957',&#xA;'13739',&#xA;'13738',&#xA;'13242',&#xA;'13740',&#xA;'12715',&#xA;'5249',&#xA;'6533',&#xA;'13744',&#xA;'13737',&#xA;'13748',&#xA;'14949',&#xA;'11036',&#xA;'9567',&#xA;'13917',&#xA;'8933',&#xA;'12707',&#xA;'11891',&#xA;'4489',&#xA;'6319',&#xA;'14753',&#xA;'12796',&#xA;'13762',&#xA;'13755',&#xA;'13754',&#xA;'13753',&#xA;'13751',&#xA;'12525',&#xA;'7375',&#xA;'13175',&#xA;'13752',&#xA;'1985',&#xA;'7516',&#xA;'7512',&#xA;'10871',&#xA;'7596',&#xA;'7562',&#xA;'7476',&#xA;'11913',&#xA;'9624',&#xA;'13042',&#xA;'10779',&#xA;'150',&#xA;'11506',&#xA;'13765',&#xA;'3572',&#xA;'11586',&#xA;'11585',&#xA;'9645',&#xA;'13767',&#xA;'14520',&#xA;'9032',&#xA;'9415',&#xA;'12735',&#xA;'11064',&#xA;'9509',&#xA;'11695',&#xA;'12010',&#xA;'13192',&#xA;'14583',&#xA;'10842',&#xA;'13348',&#xA;'7468',&#xA;'7422',&#xA;'13769',&#xA;'13777',&#xA;'13771',&#xA;'13770',&#xA;'13772',&#xA;'12986',&#xA;'11089',&#xA;'13133',&#xA;'14577',&#xA;'6027',&#xA;'13919',&#xA;'13918',&#xA;'13924',&#xA;'13920',&#xA;'11956',&#xA;'13763',&#xA;'8744',&#xA;'11743',&#xA;'9792',&#xA;'13366',&#xA;'13773',&#xA;'9593',&#xA;'13787',&#xA;'13935',&#xA;'13934',&#xA;'7345',&#xA;'13938',&#xA;'7404',&#xA;'7403',&#xA;'13784',&#xA;'8057',&#xA;'4874',&#xA;'8968',&#xA;'12686',&#xA;'13786',&#xA;'13937',&#xA;'13932',&#xA;'13779',&#xA;'8058',&#xA;'10069',&#xA;'5155',&#xA;'13798',&#xA;'12540',&#xA;'7505',&#xA;'10382',&#xA;'4490',&#xA;'14540',&#xA;'9281',&#xA;'8934',&#xA;'9686',&#xA;'8065',&#xA;'13524',&#xA;'14576',&#xA;'14405',&#xA;'10799',&#xA;'13125',&#xA;'10823',&#xA;'6834',&#xA;'9188',&#xA;'9622',&#xA;'13804',&#xA;'11115',&#xA;'10385',&#xA;'10393',&#xA;'10395',&#xA;'13801',&#xA;'7572',&#xA;'11801',&#xA;'12132',&#xA;'9676',&#xA;'8931',&#xA;'11197',&#xA;'10390',&#xA;'11153',&#xA;'13808',&#xA;'11152',&#xA;'10406',&#xA;'11150',&#xA;'13814',&#xA;'10397',&#xA;'9173',&#xA;'11011',&#xA;'11154',&#xA;'12851',&#xA;'11013',&#xA;'13806',&#xA;'8618',&#xA;'9685',&#xA;'10404',&#xA;'10411',&#xA;'13818',&#xA;'11160',&#xA;'11159',&#xA;'11157',&#xA;'10412',&#xA;'14483',&#xA;'10417',&#xA;'8935',&#xA;'11155',&#xA;'13823',&#xA;'13824',&#xA;'14521',&#xA;'10414',&#xA;'11156',&#xA;'14528',&#xA;'10765',&#xA;'10408',&#xA;'11162',&#xA;'10418',&#xA;'10420',&#xA;'11163',&#xA;'13825',&#xA;'10423',&#xA;'11161',&#xA;'11548',&#xA;'13828',&#xA;'13826',&#xA;'10424',&#xA;'10419',&#xA;'10733',&#xA;'11128',&#xA;'12682',&#xA;'12611',&#xA;'9574',&#xA;'13834',&#xA;'10436',&#xA;'11165',&#xA;'10427',&#xA;'14523',&#xA;'11171',&#xA;'10426',&#xA;'10428',&#xA;'11167',&#xA;'11168',&#xA;'10434',&#xA;'12898',&#xA;'14624',&#xA;'10432',&#xA;'13830',&#xA;'9132',&#xA;'9677',&#xA;'13835',&#xA;'10443',&#xA;'9608',&#xA;'13838',&#xA;'11172',&#xA;'10439',&#xA;'11057',&#xA;'9237',&#xA;'13810',&#xA;'12504',&#xA;'10448',&#xA;'11175',&#xA;'13836',&#xA;'8747',&#xA;'12988',&#xA;'13800',&#xA;'9563',&#xA;'10447',&#xA;'13850',&#xA;'12532',&#xA;'11179',&#xA;'10458',&#xA;'13846',&#xA;'10456',&#xA;'12534',&#xA;'10457',&#xA;'10453',&#xA;'13849',&#xA;'11190',&#xA;'11191',&#xA;'12336',&#xA;'13943',&#xA;'9207',&#xA;'12350',&#xA;'12110',&#xA;'13853',&#xA;'10462',&#xA;'12109',&#xA;'10463',&#xA;'11824',&#xA;'5451',&#xA;'11193',&#xA;'5248',&#xA;'8959',&#xA;'11192',&#xA;'9601',&#xA;'5233',&#xA;'12939',&#xA;'13855',&#xA;'10468',&#xA;'12102',&#xA;'10471',&#xA;'12120',&#xA;'13858',&#xA;'12124',&#xA;'10476',&#xA;'11196',&#xA;'10477',&#xA;'12313',&#xA;'10473',&#xA;'13852',&#xA;'11199',&#xA;'13863',&#xA;'11202',&#xA;'11201',&#xA;'13864',&#xA;'10472',&#xA;'12125',&#xA;'5915',&#xA;'11203',&#xA;'9556',&#xA;'11208',&#xA;'13867',&#xA;'10480',&#xA;'10481',&#xA;'9597',&#xA;'13882',&#xA;'11784',&#xA;'12130',&#xA;'13868',&#xA;'8049',&#xA;'6822',&#xA;'11215',&#xA;'13940',&#xA;'11210',&#xA;'10492',&#xA;'12135',&#xA;'12133',&#xA;'13869',&#xA;'10488',&#xA;'13871',&#xA;'12131',&#xA;'13939',&#xA;'11778',&#xA;'13870',&#xA;'12144',&#xA;'10497',&#xA;'10494',&#xA;'12146',&#xA;'11219',&#xA;'11223',&#xA;'12140',&#xA;'11220',&#xA;'13877',&#xA;'12852',&#xA;'10495',&#xA;'12853',&#xA;'13878',&#xA;'12860',&#xA;'10499',&#xA;'9191',&#xA;'13210',&#xA;'11843',&#xA;'11227',&#xA;'11226',&#xA;'7710',&#xA;'11230',&#xA;'10475',&#xA;'12153',&#xA;'10500',&#xA;'10503',&#xA;'14459',&#xA;'12148',&#xA;'13706',&#xA;'14492',&#xA;'12149',&#xA;'12152',&#xA;'11229',&#xA;'13766',&#xA;'13087',&#xA;'10501',&#xA;'11234',&#xA;'12872',&#xA;'10511',&#xA;'12163',&#xA;'12876',&#xA;'12162',&#xA;'11241',&#xA;'10516',&#xA;'11235',&#xA;'10505',&#xA;'10506',&#xA;'12154',&#xA;'10415',&#xA;'13048',&#xA;'9217',&#xA;'13819',&#xA;'10519',&#xA;'10522',&#xA;'11257',&#xA;'12174',&#xA;'12172',&#xA;'13983',&#xA;'11253',&#xA;'13419',&#xA;'10520',&#xA;'11254',&#xA;'12171',&#xA;'14439',&#xA;'3748',&#xA;'11262',&#xA;'12173',&#xA;'10517',&#xA;'9494',&#xA;'4981',&#xA;'10521',&#xA;'8037',&#xA;'10526',&#xA;'11267',&#xA;'11269',&#xA;'10531',&#xA;'12177',&#xA;'10523',&#xA;'11265',&#xA;'11263',&#xA;'10536',&#xA;'10535',&#xA;'12176',&#xA;'12175',&#xA;'9534',&#xA;'10547',&#xA;'12181',&#xA;'12182',&#xA;'11275',&#xA;'11270',&#xA;'10541',&#xA;'10554',&#xA;'11273',&#xA;'12178',&#xA;'12180',&#xA;'10537',&#xA;'11271',&#xA;'12100',&#xA;'10539',&#xA;'12650',&#xA;'11224',&#xA;'5889',&#xA;'9096',&#xA;'10561',&#xA;'11285',&#xA;'11278',&#xA;'13764',&#xA;'12188',&#xA;'13843',&#xA;'10573',&#xA;'11281',&#xA;'10563',&#xA;'13789',&#xA;'11504',&#xA;'7128',&#xA;'11284',&#xA;'10555',&#xA;'12185',&#xA;'7142',&#xA;'13005',&#xA;'12183',&#xA;'12201',&#xA;'11293',&#xA;'12204',&#xA;'10574',&#xA;'10579',&#xA;'10576',&#xA;'12193',&#xA;'11292',&#xA;'10580',&#xA;'10587',&#xA;'11289',&#xA;'11194',&#xA;'9774',&#xA;'11547',&#xA;'12207',&#xA;'12305',&#xA;'10498',&#xA;'11195',&#xA;'11302',&#xA;'11264',&#xA;'11164',&#xA;'10592',&#xA;'11303',&#xA;'11305',&#xA;'10664',&#xA;'11043',&#xA;'10657',&#xA;'12208',&#xA;'11294',&#xA;'13896',&#xA;'8056',&#xA;'10502',&#xA;'8974',&#xA;'12241',&#xA;'10682',&#xA;'12218',&#xA;'10691',&#xA;'10680',&#xA;'12219',&#xA;'11308',&#xA;'10672',&#xA;'10690',&#xA;'11309',&#xA;'11307',&#xA;'10693',&#xA;'11310',&#xA;'10496',&#xA;'12220',&#xA;'13906',&#xA;'11313',&#xA;'11311',&#xA;'10709',&#xA;'10707',&#xA;'11314',&#xA;'11325',&#xA;'12276',&#xA;'11322',&#xA;'12267',&#xA;'14416',&#xA;'10695',&#xA;'10705',&#xA;'12937',&#xA;'12243',&#xA;'12935',&#xA;'8705',&#xA;'12274',&#xA;'11334',&#xA;'11326',&#xA;'10717',&#xA;'10710',&#xA;'10712',&#xA;'11329',&#xA;'10718',&#xA;'12277',&#xA;'10713',&#xA;'12279',&#xA;'10714',&#xA;'12281',&#xA;'11335',&#xA;'8750',&#xA;'9216',&#xA;'6121',&#xA;'11368',&#xA;'12291',&#xA;'10719',&#xA;'10724',&#xA;'10721',&#xA;'11367',&#xA;'12289',&#xA;'11366',&#xA;'10720',&#xA;'10722',&#xA;'11337',&#xA;'12288',&#xA;'11365',&#xA;'10067',&#xA;'9752',&#xA;'11482',&#xA;'13430',&#xA;'13732',&#xA;'10464',&#xA;'7384',&#xA;'11898',&#xA;'11895',&#xA;'12641',&#xA;'11114',&#xA;'12531',&#xA;'10727',&#xA;'11369',&#xA;'12901',&#xA;'14458',&#xA;'11474',&#xA;'12300',&#xA;'10732',&#xA;'12295',&#xA;'11371',&#xA;'10728',&#xA;'11478',&#xA;'6225',&#xA;'8799',&#xA;'5222',&#xA;'11737',&#xA;'6308',&#xA;'13330',&#xA;'10753',&#xA;'11479',&#xA;'10746',&#xA;'10749',&#xA;'11477',&#xA;'10741',&#xA;'11505',&#xA;'8010',&#xA;'14535',&#xA;'11643',&#xA;'9539',&#xA;'6201',&#xA;'8164',&#xA;'10756',&#xA;'12308',&#xA;'11503',&#xA;'10766',&#xA;'12307',&#xA;'10780',&#xA;'10786',&#xA;'10774',&#xA;'9594',&#xA;'11589',&#xA;'8130',&#xA;'10781',&#xA;'12312',&#xA;'12311',&#xA;'12321',&#xA;'10808',&#xA;'12320',&#xA;'10796',&#xA;'11759',&#xA;'12317',&#xA;'10798',&#xA;'12322',&#xA;'10802',&#xA;'12319',&#xA;'6892',&#xA;'3744',&#xA;'12324',&#xA;'10821',&#xA;'10810',&#xA;'12331',&#xA;'12323',&#xA;'12328',&#xA;'10824',&#xA;'10819',&#xA;'12337',&#xA;'12335',&#xA;'10833',&#xA;'10832',&#xA;'11875',&#xA;'12333',&#xA;'12334',&#xA;'10828',&#xA;'10825',&#xA;'10829',&#xA;'10826',&#xA;'12339',&#xA;'10848',&#xA;'12294',&#xA;'12344',&#xA;'10856',&#xA;'12345',&#xA;'12338',&#xA;'10844',&#xA;'10858',&#xA;'10883',&#xA;'10882',&#xA;'12352',&#xA;'11751',&#xA;'13908',&#xA;'12347',&#xA;'10870',&#xA;'12488',&#xA;'12354',&#xA;'12490',&#xA;'10921',&#xA;'10884',&#xA;'8124',&#xA;'12501',&#xA;'10920',&#xA;'10919',&#xA;'10896',&#xA;'12502',&#xA;'10915',&#xA;'12505',&#xA;'10927',&#xA;'12510',&#xA;'12507',&#xA;'10926',&#xA;'12513',&#xA;'12506',&#xA;'10936',&#xA;'10947',&#xA;'10935',&#xA;'10930',&#xA;'10954',&#xA;'12515',&#xA;'10952',&#xA;'13032',&#xA;'10948',&#xA;'10956',&#xA;'10951',&#xA;'12523',&#xA;'12518',&#xA;'12520',&#xA;'9821',&#xA;'9558',&#xA;'13092',&#xA;'12527',&#xA;'10972',&#xA;'12530',&#xA;'12526',&#xA;'10964',&#xA;'10973',&#xA;'13253',&#xA;'12539',&#xA;'12541',&#xA;'12543',&#xA;'12538',&#xA;'12542',&#xA;'12553',&#xA;'13931',&#xA;'13925',&#xA;'12545',&#xA;'12548',&#xA;'13930',&#xA;'13929',&#xA;'12547',&#xA;'13928',&#xA;'12544',&#xA;'12551',&#xA;'12587',&#xA;'12555',&#xA;'12583',&#xA;'13887',&#xA;'11792',&#xA;'13888',&#xA;'12565',&#xA;'12569',&#xA;'12558',&#xA;'13880',&#xA;'13889',&#xA;'12588',&#xA;'12589',&#xA;'13891',&#xA;'13890',&#xA;'12593',&#xA;'13892',&#xA;'13893',&#xA;'12592',&#xA;'12590',&#xA;'12606',&#xA;'13899',&#xA;'12603',&#xA;'12622',&#xA;'13895',&#xA;'12605',&#xA;'12604',&#xA;'13898',&#xA;'12600',&#xA;'13902',&#xA;'13901',&#xA;'13907',&#xA;'13903',&#xA;'12608',&#xA;'13900',&#xA;'12607',&#xA;'12609',&#xA;'5858',&#xA;'13951',&#xA;'13941',&#xA;'13946',&#xA;'13942',&#xA;'13119',&#xA;'13944',&#xA;'13952',&#xA;'13961',&#xA;'13956',&#xA;'13959',&#xA;'13953',&#xA;'13958',&#xA;'13964',&#xA;'13967',&#xA;'13963',&#xA;'13976',&#xA;'13966',&#xA;'13971',&#xA;'13977',&#xA;'13978',&#xA;'13984',&#xA;'13981',&#xA;'13980',&#xA;'12973',&#xA;'14000',&#xA;'14005',&#xA;'13996',&#xA;'13992',&#xA;'13988',&#xA;'14009',&#xA;'14023',&#xA;'14013',&#xA;'14015',&#xA;'14019',&#xA;'14021',&#xA;'14020',&#xA;'9566',&#xA;'9543',&#xA;'12022',&#xA;'11740',&#xA;'9779',&#xA;'14025',&#xA;'14024',&#xA;'11174',&#xA;'10358',&#xA;'9492',&#xA;'14027',&#xA;'14034',&#xA;'14415',&#xA;'12296',&#xA;'11038',&#xA;'11002',&#xA;'11955',&#xA;'13232',&#xA;'9829',&#xA;'11901',&#xA;'10487',&#xA;'11142',&#xA;'13796',&#xA;'11045',&#xA;'9881',&#xA;'4719',&#xA;'14038',&#xA;'14044',&#xA;'14040',&#xA;'14042',&#xA;'14047',&#xA;'14050',&#xA;'14084',&#xA;'14079',&#xA;'14077',&#xA;'14062',&#xA;'14090',&#xA;'14061',&#xA;'14120',&#xA;'14092',&#xA;'14093',&#xA;'14094',&#xA;'14129',&#xA;'14121',&#xA;'14151',&#xA;'14148',&#xA;'14140',&#xA;'14149',&#xA;'14132',&#xA;'14153',&#xA;'14175',&#xA;'14883',&#xA;'14169',&#xA;'14170',&#xA;'14158',&#xA;'14159',&#xA;'14174',&#xA;'14220',&#xA;'14219',&#xA;'14218',&#xA;'14195',&#xA;'14196',&#xA;'14237',&#xA;'14238',&#xA;'14248',&#xA;'14276',&#xA;'14268',&#xA;'14260',&#xA;'14271',&#xA;'14293',&#xA;'14280',&#xA;'14285',&#xA;'14297',&#xA;'14295',&#xA;'14277',&#xA;'14306',&#xA;'7972',&#xA;'10088',&#xA;'7584',&#xA;'9880',&#xA;'4844',&#xA;'12632',&#xA;'12933',&#xA;'9146',&#xA;'14756',&#xA;'10055',&#xA;'9198',&#xA;'13555',&#xA;'9728',&#xA;'14312',&#xA;'9491',&#xA;'13845',&#xA;'10588',&#xA;'12631',&#xA;'11141',&#xA;'10661',&#xA;'14323',&#xA;'14331',&#xA;'14348',&#xA;'14350',&#xA;'14322',&#xA;'14349',&#xA;'14356',&#xA;'14359',&#xA;'14304',&#xA;'6317',&#xA;'7395',&#xA;'13271',&#xA;'9108',&#xA;'13340',&#xA;'9289',&#xA;'12129',&#xA;'8956',&#xA;'4727',&#xA;'9718',&#xA;'7405',&#xA;'13413',&#xA;'13799',&#xA;'9535',&#xA;'9768',&#xA;'10658',&#xA;'11287',&#xA;'8616',&#xA;'9180',&#xA;'10089',&#xA;'11218',&#xA;'14358',&#xA;'9208',&#xA;'14318',&#xA;'14758',&#xA;'7594',&#xA;'13865',&#xA;'12212',&#xA;'10384',&#xA;'10086',&#xA;'12708',&#xA;'12862',&#xA;'11752',&#xA;'6298',&#xA;'8638',&#xA;'9135',&#xA;'4759',&#xA;'12830',&#xA;'3750',&#xA;'11109',&#xA;'11945',&#xA;'8184',&#xA;'7957',&#xA;'13532',&#xA;'10559',&#xA;'11207',&#xA;'9711',&#xA;'10090',&#xA;'11116',&#xA;'11173',&#xA;'10486',&#xA;'7189',&#xA;'7969',&#xA;'13793',&#xA;'14565',&#xA;'8111',&#xA;'14910',&#xA;'9528',&#xA;'9063',&#xA;'9170',&#xA;'7825',&#xA;'9587',&#xA;'11136',&#xA;'14032',&#xA;'11149',&#xA;'4737',&#xA;'5986',&#xA;'9585',&#xA;'10493',&#xA;'8972',&#xA;'11972',&#xA;'13416',&#xA;'13269',&#xA;'6237',&#xA;'10053',&#xA;'11918',&#xA;'10099',&#xA;'7323',&#xA;'13331',&#xA;'6973',&#xA;'12215',&#xA;'7337',&#xA;'10504',&#xA;'10383',&#xA;'14320',&#xA;'9727',&#xA;'13211',&#xA;'11206',&#xA;'6251',&#xA;'10483',&#xA;'6989',&#xA;'9489',&#xA;'4901',&#xA;'11940',&#xA;'11232',&#xA;'9499',&#xA;'14305',&#xA;'9495',&#xA;'11299',&#xA;'12967',&#xA;'6992',&#xA;'10557',&#xA;'11290',&#xA;'14875',&#xA;'14902',&#xA;'11170',&#xA;'14360',&#xA;'6173',&#xA;'13541',&#xA;'11106',&#xA;'14616',&#xA;'14903',&#xA;'4739',&#xA;'13698',&#xA;'9580',&#xA;'6405',&#xA;'11184',&#xA;'5964',&#xA;'9157',&#xA;'10451',&#xA;'5099',&#xA;'12774',&#xA;'11186',&#xA;'9529',&#xA;'13700',&#xA;'4740',&#xA;'11680',&#xA;'9113',&#xA;'4789',&#xA;'14357',&#xA;'14762',&#xA;'11249',&#xA;'3754',&#xA;'9165',&#xA;'14035',&#xA;'9565',&#xA;'14434',&#xA;'14884',&#xA;'10087',&#xA;'12620',&#xA;'13236',&#xA;'8752',&#xA;'7984',&#xA;'7807',&#xA;'5863',&#xA;'11212',&#xA;'13708',&#xA;'8989',&#xA;'7582',&#xA;'10577',&#xA;'11862',&#xA;'11916'&#xA;)&#xA;&#xA;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="value"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="calle"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="numext"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="numint"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="colonia"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postal"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="localidad"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ciudad"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="estado"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="pais"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="isshipto"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlInput_1">
+      <column comment="" key="false" length="40" name="value" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="calle" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="numext" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="numint" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="colonia" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="postal" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="localidad" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="ciudad" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="estado" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="pais" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="isshipto" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_8jUbkHhrEeeUSfPlq0-DEg-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="aa" name="aa">
+      <column comment="" key="false" length="40" name="value" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="calle" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="numext" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="numint" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="colonia" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="localidad" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="ciudad" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="estado" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="pais" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="postal" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="isshipto" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="aa">
+        <mapperTableEntries name="value" expression="row1.value " type="id_String" nullable="true"/>
+        <mapperTableEntries name="name" expression="row1.name " type="id_String" nullable="true"/>
+        <mapperTableEntries name="calle" expression="row1.calle " type="id_String" nullable="true"/>
+        <mapperTableEntries name="numext" expression="row1.numext " type="id_String" nullable="true"/>
+        <mapperTableEntries name="numint" expression="row1.numint " type="id_String" nullable="true"/>
+        <mapperTableEntries name="colonia" expression="row1.colonia " type="id_String" nullable="true"/>
+        <mapperTableEntries name="localidad" expression="row1.localidad " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ciudad" expression="row1.ciudad " type="id_String" nullable="true"/>
+        <mapperTableEntries name="estado" expression="row1.estado " type="id_String" nullable="true"/>
+        <mapperTableEntries name="pais" expression="row1.pais " type="id_String" nullable="true"/>
+        <mapperTableEntries name="postal" expression="row1.postal " type="id_String" nullable="true"/>
+        <mapperTableEntries name="isshipto" expression="row1.isshipto " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="value" type="id_String"/>
+        <mapperTableEntries name="name" type="id_String"/>
+        <mapperTableEntries name="calle" type="id_String" nullable="true"/>
+        <mapperTableEntries name="numext" type="id_String" nullable="true"/>
+        <mapperTableEntries name="numint" type="id_String" nullable="true"/>
+        <mapperTableEntries name="colonia" type="id_String" nullable="true"/>
+        <mapperTableEntries name="postal" type="id_String" nullable="true"/>
+        <mapperTableEntries name="localidad" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ciudad" type="id_String" nullable="true"/>
+        <mapperTableEntries name="estado" type="id_String"/>
+        <mapperTableEntries name="pais" type="id_String"/>
+        <mapperTableEntries name="isshipto" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5434&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;agrovizion&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;postgres&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="/Qo6GZjmi7hJFdv8/sYaJEfIfanNtEE1"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;tem_clientes_env&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="SPATIAL_INDEX" value="false" show="false"/>
+    <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" value="false" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
+    <elementParameter field="CHECK" name="SAVE_POINT" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="value"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="calle"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="numext"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="numint"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="colonia"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="localidad"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ciudad"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="estado"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="pais"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postal"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="isshipto"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="aa" name="tPostgresqlOutput_1">
+      <column comment="" key="false" length="40" name="value" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="calle" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="numext" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="numint" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="colonia" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="localidad" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="ciudad" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="estado" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="pais" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="postal" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="isshipto" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="aa" name="REJECT">
+      <column comment="" key="false" length="40" name="value" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="calle" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="numext" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="numint" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="colonia" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="localidad" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="ciudad" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="estado" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="60" name="pais" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="postal" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="isshipto" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlConnection_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5434&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;Agrovizion2&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;postgres&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="/Qo6GZjmi7hJFdv8/sYaJEfIfanNtEE1"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tPostgresqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="aa" lineStyle="0" metaname="aa" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tPostgresqlOutput_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="postal"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="aa" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlConnection_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>

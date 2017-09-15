@@ -114,13 +114,15 @@
       <relatedItems xmi:id="_CV1fOoq0EeerAqN4KVp09Q" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_CV1fO4q0EeerAqN4KVp09Q" id="_HHkLgHhuEeeUSfPlq0-DEg - metadata" version="Latest" type="schema"/>
       <relatedItems xmi:id="_RkcfcJDrEeeVjIQ0psqThQ" id="_S0mGQIcHEee7h7HwNJ1geg" version="Latest" type="property"/>
-      <relatedItems xmi:id="_RkcfcZDrEeeVjIQ0psqThQ" id="_S0mGQIcHEee7h7HwNJ1geg - DocumentoIngresoImportacion" version="Latest" type="schema"/>
       <relatedItems xmi:id="_NKkGYJDxEeeVjIQ0psqThQ" id="_12k0MIa4EeeIb-x2kFJ6MA" version="Latest" type="property"/>
       <relatedItems xmi:id="_NKkGYZDxEeeVjIQ0psqThQ" id="_S0mGQIcHEee7h7HwNJ1geg - DetalleIngresoImportacion" version="Latest" type="schema"/>
-      <relatedItems xmi:id="_NKkGYpDxEeeVjIQ0psqThQ" id="_12k0MIa4EeeIb-x2kFJ6MA - and_detalleingresoimportacion" version="Latest" type="schema"/>
       <relatedItems xmi:id="__WIvYpD_EeeVjIQ0psqThQ" id="_S0mGQIcHEee7h7HwNJ1geg - DetalleSalidaImportacion" version="Latest" type="schema"/>
-      <relatedItems xmi:id="__WIvY5D_EeeVjIQ0psqThQ" id="_S0mGQIcHEee7h7HwNJ1geg - DocumentoSalidaImportacion" version="Latest" type="schema"/>
-      <relatedItems xmi:id="_J_CcMJEKEeeVjIQ0psqThQ" id="_12k0MIa4EeeIb-x2kFJ6MA - and_last" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_t95rEJi8EeeOM69wnksa9w" id="_12k0MIa4EeeIb-x2kFJ6MA - and_last" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_dDSWcZmgEeeOM69wnksa9w" id="_S0mGQIcHEee7h7HwNJ1geg - ProductoImportacion" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_5CZ2QJmsEeeOM69wnksa9w" id="_S0mGQIcHEee7h7HwNJ1geg - OrigenImportacion" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_5CZ2QZmsEeeOM69wnksa9w" id="_S0mGQIcHEee7h7HwNJ1geg - DestinoImportacion" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_5CZ2QpmsEeeOM69wnksa9w" id="_12k0MIa4EeeIb-x2kFJ6MA - and_destinoimportacion" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_5CZ2Q5msEeeOM69wnksa9w" id="_12k0MIa4EeeIb-x2kFJ6MA - and_orgienimportacion" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_olWC8I3wEeerAqN4KVp09Q">
       <baseItem xmi:id="_olWC8Y3wEeerAqN4KVp09Q" id="_RjzWwI3sEeerAqN4KVp09Q" version="0.1" type="job"/>

@@ -172,35 +172,35 @@
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="and_productoimportacion" name="tPostgresqlInput_1">
-      <column comment="" key="false" length="-1" name="idcompania" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+    <metadata comment="" connector="FLOW" label="and_productoimportacion" name="and_productoimportacion" type="VIEW">
+      <column comment="" key="false" length="131089" name="idcompania" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="40" name="idproducto" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="2147483647" name="idproducto" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="idtipoproducto" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="2147483647" name="idtipoproducto" nullable="true" pattern="" precision="0" sourceType="UNKNOWN" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="idlineaventa" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="2147483647" name="idlineaventa" nullable="true" pattern="" precision="0" sourceType="UNKNOWN" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="idunidadproducto" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="2147483647" name="idunidadproducto" nullable="true" pattern="" precision="0" sourceType="UNKNOWN" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="iddefinicionalmacenaje" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="131089" name="iddefinicionalmacenaje" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="idcaducidad" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="131089" name="idcaducidad" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="idrotacionabc" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="131089" name="idrotacionabc" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="-1" name="idunidadcubicacion" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="131089" name="idunidadcubicacion" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="255" name="nombre" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="2147483647" name="nombre" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="30" name="ean13" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -212,13 +212,16 @@
       <column comment="" key="false" length="2147483647" name="etiqueta" nullable="true" pattern="" precision="0" sourceType="UNKNOWN" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="2147483647" name="idtipoafectacion" nullable="true" pattern="" precision="0" sourceType="UNKNOWN" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="2147483647" name="idtipoafectacion" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="-1" name="idestadointerfaz" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="2147483647" name="productoactivo" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="29" name="updated" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <additionalProperties key="Comment" value=""/>
@@ -433,6 +436,7 @@
         <mapperTableEntries name="idtipoafectacion" type="id_String" nullable="true"/>
         <mapperTableEntries name="idestadointerfaz" type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="productoactivo" type="id_String" nullable="true"/>
+        <mapperTableEntries name="updated" type="id_Date" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>

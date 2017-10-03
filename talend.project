@@ -123,6 +123,10 @@
       <relatedItems xmi:id="_5CZ2QZmsEeeOM69wnksa9w" id="_S0mGQIcHEee7h7HwNJ1geg - DestinoImportacion" version="Latest" type="schema"/>
       <relatedItems xmi:id="_5CZ2QpmsEeeOM69wnksa9w" id="_12k0MIa4EeeIb-x2kFJ6MA - and_destinoimportacion" version="Latest" type="schema"/>
       <relatedItems xmi:id="_5CZ2Q5msEeeOM69wnksa9w" id="_12k0MIa4EeeIb-x2kFJ6MA - and_orgienimportacion" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_PJE8QKLeEee2JLBX14x9ng" id="_S0mGQIcHEee7h7HwNJ1geg - DocumentoIngresoExportacion" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_PJE8QaLeEee2JLBX14x9ng" id="_S0mGQIcHEee7h7HwNJ1geg - DetalleIngresoExportacion" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_K3n2YKRYEeeI2q9RiRq74Q" id="_12k0MIa4EeeIb-x2kFJ6MA - and_documentoingresoexportacion" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_K3n2YaRYEeeI2q9RiRq74Q" id="_12k0MIa4EeeIb-x2kFJ6MA - and_detalleingresoexportacion" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_olWC8I3wEeerAqN4KVp09Q">
       <baseItem xmi:id="_olWC8Y3wEeerAqN4KVp09Q" id="_RjzWwI3sEeerAqN4KVp09Q" version="0.1" type="job"/>

@@ -127,6 +127,7 @@
       <relatedItems xmi:id="_PJE8QaLeEee2JLBX14x9ng" id="_S0mGQIcHEee7h7HwNJ1geg - DetalleIngresoExportacion" version="Latest" type="schema"/>
       <relatedItems xmi:id="_K3n2YKRYEeeI2q9RiRq74Q" id="_12k0MIa4EeeIb-x2kFJ6MA - and_documentoingresoexportacion" version="Latest" type="schema"/>
       <relatedItems xmi:id="_K3n2YaRYEeeI2q9RiRq74Q" id="_12k0MIa4EeeIb-x2kFJ6MA - and_detalleingresoexportacion" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_iJocYKjOEeeI2q9RiRq74Q" id="_12k0MIa4EeeIb-x2kFJ6MA - and_productoimportacion" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_olWC8I3wEeerAqN4KVp09Q">
       <baseItem xmi:id="_olWC8Y3wEeerAqN4KVp09Q" id="_RjzWwI3sEeerAqN4KVp09Q" version="0.1" type="job"/>

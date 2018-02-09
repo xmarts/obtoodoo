@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_XzpiINWTEeeXPa3Oym-G7g" dataPackage="_XzpiIdWTEeeXPa3Oym-G7g"/>
+  <TalendMetadata:GenericPackage xmi:id="_XzpiIdWTEeeXPa3Oym-G7g" dataManager="_XzpiINWTEeeXPa3Oym-G7g">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_XzpiItWTEeeXPa3Oym-G7g" id="_Xzns8NWTEeeXPa3Oym-G7g" label="lxtrack_orden">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiI9WTEeeXPa3Oym-G7g" name="id" label="id" length="10" sourceType="INT" talendType="id_Integer" key="true" nullable="false">
+        <initialValue xmi:id="_XzpiJNWTEeeXPa3Oym-G7g"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiJdWTEeeXPa3Oym-G7g" name="id_local" label="id_local" length="10" sourceType="INT" talendType="id_Integer">
+        <initialValue xmi:id="_XzpiJtWTEeeXPa3Oym-G7g"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiJ9WTEeeXPa3Oym-G7g" name="id_cliente" label="id_cliente" length="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_XzpiKNWTEeeXPa3Oym-G7g"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiKdWTEeeXPa3Oym-G7g" name="id_cliente_direccion" label="id_cliente_direccion" length="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_XzpiKtWTEeeXPa3Oym-G7g"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiK9WTEeeXPa3Oym-G7g" name="comentarios" label="comentarios" length="500" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_XzpiLNWTEeeXPa3Oym-G7g"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiLdWTEeeXPa3Oym-G7g" name="clave_orden_prioridad" label="clave_orden_prioridad" length="5" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_XzpiLtWTEeeXPa3Oym-G7g"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiL9WTEeeXPa3Oym-G7g" name="id_encargado" label="id_encargado" length="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_XzpiMNWTEeeXPa3Oym-G7g"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiMdWTEeeXPa3Oym-G7g" name="id_supervisor" label="id_supervisor" length="10" sourceType="INT" talendType="id_Integer">
+        <initialValue xmi:id="_XzpiMtWTEeeXPa3Oym-G7g"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiM9WTEeeXPa3Oym-G7g" name="clave_orden_estatus" label="clave_orden_estatus" length="5" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_XzpiNNWTEeeXPa3Oym-G7g" body="'1'"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiNdWTEeeXPa3Oym-G7g" name="id_formulario" label="id_formulario" length="10" sourceType="INT" talendType="id_Integer">
+        <initialValue xmi:id="_XzpiNtWTEeeXPa3Oym-G7g"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiN9WTEeeXPa3Oym-G7g" name="tipo_orden" label="tipo_orden" length="-1" sourceType="ENUM" talendType="id_String">
+        <initialValue xmi:id="_XzpiONWTEeeXPa3Oym-G7g" body="'VENTA'"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiOdWTEeeXPa3Oym-G7g" name="active" label="active" length="2" sourceType="ENUM" talendType="id_Object">
+        <initialValue xmi:id="_XzpiOtWTEeeXPa3Oym-G7g" body="'1'"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiO9WTEeeXPa3Oym-G7g" name="id_inactive_reason" label="id_inactive_reason" length="10" sourceType="INT" talendType="id_Integer">
+        <initialValue xmi:id="_XzpiPNWTEeeXPa3Oym-G7g"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiPdWTEeeXPa3Oym-G7g" name="insert_date" label="insert_date" length="19" sourceType="DATETIME" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_XzpiPtWTEeeXPa3Oym-G7g"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiP9WTEeeXPa3Oym-G7g" name="mod_date" label="mod_date" length="19" sourceType="TIMESTAMP" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_XzpiQNWTEeeXPa3Oym-G7g" body="CURRENT_TIMESTAMP"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiQdWTEeeXPa3Oym-G7g" name="id_usuario_creator" label="id_usuario_creator" length="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_XzpiQtWTEeeXPa3Oym-G7g" body="0"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiQ9WTEeeXPa3Oym-G7g" name="id_usuario_last_editor" label="id_usuario_last_editor" length="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_XzpiRNWTEeeXPa3Oym-G7g" body="0"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XzpiRdWTEeeXPa3Oym-G7g" name="id_sesion_app" label="id_sesion_app" length="10" sourceType="INT" talendType="id_Integer">
+        <initialValue xmi:id="_XzpiRtWTEeeXPa3Oym-G7g"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

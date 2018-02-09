@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_fjoOMtnIEee7Vutk1Nhghw" dataPackage="_fjoOM9nIEee7Vutk1Nhghw"/>
+  <TalendMetadata:GenericPackage xmi:id="_fjoOM9nIEee7Vutk1Nhghw" dataManager="_fjoOMtnIEee7Vutk1Nhghw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_fjoONNnIEee7Vutk1Nhghw" id="_fjoOMNnIEee7Vutk1Nhghw" label="lxtrack_pedido">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_fjoONdnIEee7Vutk1Nhghw" name="id" label="id" length="10" sourceType="INT" talendType="id_Integer" key="true" nullable="false">
+        <initialValue xmi:id="_fjoONtnIEee7Vutk1Nhghw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_fjoON9nIEee7Vutk1Nhghw" name="id_reporte" label="id_reporte" length="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_fjoOONnIEee7Vutk1Nhghw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_fjoOOdnIEee7Vutk1Nhghw" name="id_producto" label="id_producto" length="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_fjoOOtnIEee7Vutk1Nhghw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_fjoOO9nIEee7Vutk1Nhghw" name="cantidad" label="cantidad" length="10" sourceType="INT" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_fjoOPNnIEee7Vutk1Nhghw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_fjoOPdnIEee7Vutk1Nhghw" name="insert_date" label="insert_date" length="19" sourceType="DATETIME" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_fjoOPtnIEee7Vutk1Nhghw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_fjoOP9nIEee7Vutk1Nhghw" name="mod_date" label="mod_date" length="19" sourceType="TIMESTAMP" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_fjoOQNnIEee7Vutk1Nhghw" body="CURRENT_TIMESTAMP"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_paGkENnIEee7Vutk1Nhghw" name="codigo" label="codigo" length="100" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_sySn4NnIEee7Vutk1Nhghw" name="descripcion" label="descripcion" length="200" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wEupANnIEee7Vutk1Nhghw" name="precio_unitario" label="precio_unitario" length="10" talendType="id_BigDecimal"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0oVXENnIEee7Vutk1Nhghw" name="sku" label="sku" length="30" talendType="id_String">
+        <initialValue xmi:id="_4YKe0NnIEee7Vutk1Nhghw" body=""/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

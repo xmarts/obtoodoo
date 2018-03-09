@@ -255,6 +255,19 @@
       <relatedItems xmi:id="_2AueqeHlEee2tLFeSJ5rJQ" id="_S0mGQIcHEee7h7HwNJ1geg - DetalleIngresoExportacion" version="Latest" type="schema"/>
       <relatedItems xmi:id="_2AuequHlEee2tLFeSJ5rJQ" id="_12k0MIa4EeeIb-x2kFJ6MA - and_detalleingresoexportacion" version="Latest" type="schema"/>
     </ItemsRelations>
+    <ItemsRelations xmi:id="_TV-E0CPSEeiX3MQR-vFmLw">
+      <baseItem xmi:id="_TV-E0SPSEeiX3MQR-vFmLw" id="_3cs34CPREeiX3MQR-vFmLw" version="0.1" type="job"/>
+      <relatedItems xmi:id="_TV-E0iPSEeiX3MQR-vFmLw" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TV-E0yPSEeiX3MQR-vFmLw" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TV-E1CPSEeiX3MQR-vFmLw" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TV-E1SPSEeiX3MQR-vFmLw" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TV-E1iPSEeiX3MQR-vFmLw" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TV-E1yPSEeiX3MQR-vFmLw" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TV-E2CPSEeiX3MQR-vFmLw" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TV-E2SPSEeiX3MQR-vFmLw" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TV-E2iPSEeiX3MQR-vFmLw" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TV-E2yPSEeiX3MQR-vFmLw" id="_HHkLgHhuEeeUSfPlq0-DEg - metadata" version="Latest" type="schema"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_gUDx8HMEEee3G6NomtyFTg" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_gUDx8XMEEee3G6NomtyFTg" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>
     <migrationTask xmi:id="_gUDx8nMEEee3G6NomtyFTg" id="org.talend.designer.maven.ui.ConfigMavenRepositoryRemove" breaks="6.0.1" version="6.0.2" status="ok"/>

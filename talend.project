@@ -150,7 +150,6 @@
       <relatedItems xmi:id="_vMPVINQSEee1xNiDtlPhHQ" id="_H5W6sNQJEee5adDk8tXtDg - lxtrack_usuario" version="Latest" type="schema"/>
       <relatedItems xmi:id="_vMPVIdQSEee1xNiDtlPhHQ" id="_gk7T4I6tEee1LJJOaIBo0Q - hr_employee" version="Latest" type="schema"/>
       <relatedItems xmi:id="_uw89oNWOEeeXPa3Oym-G7g" id="_H5W6sNQJEee5adDk8tXtDg - lxtrack_orden_agenda" version="Latest" type="schema"/>
-      <relatedItems xmi:id="_89vlodmCEee7Vutk1Nhghw" id="_gk7T4I6tEee1LJJOaIBo0Q - sale_order" version="Latest" type="schema"/>
       <relatedItems xmi:id="_c8o2ANpFEee7Vutk1Nhghw" id="_H5W6sNQJEee5adDk8tXtDg - lxtrack_pedido" version="Latest" type="query"/>
       <relatedItems xmi:id="_c8o2AdpFEee7Vutk1Nhghw" id="_gk7T4I6tEee1LJJOaIBo0Q - product_template" version="Latest" type="schema"/>
       <relatedItems xmi:id="_c8o2A9pFEee7Vutk1Nhghw" id="_fjoOMdnIEee7Vutk1Nhghw - lxtrack_pedido" version="Latest" type="schema"/>
@@ -160,6 +159,7 @@
       <relatedItems xmi:id="_WXO7kN9kEeeEVN79L0DVIw" id="_gk7T4I6tEee1LJJOaIBo0Q - stock_picking" version="Latest" type="schema"/>
       <relatedItems xmi:id="_gC09gN9sEeeEVN79L0DVIw" id="_gk7T4I6tEee1LJJOaIBo0Q - stock_move" version="Latest" type="schema"/>
       <relatedItems xmi:id="_gC09gd9sEeeEVN79L0DVIw" id="_H5W6sNQJEee5adDk8tXtDg - lxtrack_pedido_entrega" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_7bj_UA3GEei0i4uTDb6Glg" id="_gk7T4I6tEee1LJJOaIBo0Q - sale_order_line" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_4NK94I5oEee1LJJOaIBo0Q">
       <baseItem xmi:id="_4NK94Y5oEee1LJJOaIBo0Q" id="_sXLPMHr_EeeqKKeKCflO8A" version="0.1" type="job"/>

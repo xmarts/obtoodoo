@@ -4452,7 +4452,6 @@
         <mapperTableEntries name="purchase_line_warn" type="id_String"/>
         <mapperTableEntries name="purchase_line_warn_msg" type="id_String" nullable="true"/>
         <mapperTableEntries name="can_be_expensed" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="tic_category_id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="landed_cost_ok" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="split_method" type="id_String" nullable="true"/>
         <mapperTableEntries name="life_time" type="id_Integer" nullable="true"/>
@@ -4476,6 +4475,7 @@
         <mapperTableEntries name="liters_container" type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="family_id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="marca_id" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="x_studio_field_PoAQo" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -4801,8 +4801,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="can_be_expensed"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="tic_category_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="landed_cost_ok"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="split_method"/>
@@ -4848,6 +4846,8 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="family_id"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="marca_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="x_studio_field_PoAQo"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
@@ -4982,9 +4982,6 @@
       <column comment="Can be Expensed" key="false" length="1" name="can_be_expensed" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
         <additionalField key="Comment" value="Can be Expensed"/>
       </column>
-      <column comment="TaxCloud Category" key="false" length="10" name="tic_category_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="TaxCloud Category"/>
-      </column>
       <column comment="Is a Landed Cost" key="false" length="1" name="landed_cost_ok" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
         <additionalField key="Comment" value="Is a Landed Cost"/>
       </column>
@@ -5053,6 +5050,9 @@
       </column>
       <column comment="Marca" key="false" length="10" name="marca_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="Marca"/>
+      </column>
+      <column comment="New Texto" key="false" length="2147483647" name="x_studio_field_PoAQo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value="New Texto"/>
       </column>
       <additionalProperties key="Comment" value="Product Template"/>
     </metadata>
@@ -7125,7 +7125,7 @@
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="stock_move" name="tPostgresqlInput_9">
+    <metadata comment="Stock Move" connector="FLOW" label="stock_move" name="stock_move" type="TABLE">
       <column comment="" defaultValue="nextval('stock_move_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -7261,35 +7261,8 @@
       <column comment="Sale Line" key="false" length="10" name="sale_line_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="Sale Line"/>
       </column>
-      <column comment="Created Production Order" key="false" length="10" name="created_production_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Created Production Order"/>
-      </column>
-      <column comment="Production Order for finished products" key="false" length="10" name="production_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Production Order for finished products"/>
-      </column>
-      <column comment="Production Order for raw materials" key="false" length="10" name="raw_material_production_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Production Order for raw materials"/>
-      </column>
-      <column comment="Unbuild Order" key="false" length="10" name="unbuild_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Unbuild Order"/>
-      </column>
-      <column comment="Consume Unbuild Order" key="false" length="10" name="consume_unbuild_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Consume Unbuild Order"/>
-      </column>
-      <column comment="Operation To Consume" key="false" length="10" name="operation_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Operation To Consume"/>
-      </column>
-      <column comment="Work Order To Consume" key="false" length="10" name="workorder_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Work Order To Consume"/>
-      </column>
-      <column comment="BoM Line" key="false" length="10" name="bom_line_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="BoM Line"/>
-      </column>
-      <column comment="Unit Factor" key="false" length="17" name="unit_factor" nullable="true" pattern="" precision="17" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value="Unit Factor"/>
-      </column>
-      <column comment="Done" key="false" length="1" name="is_done" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
-        <additionalField key="Comment" value="Done"/>
+      <column comment="Landed Cost" key="false" length="17" name="landed_cost_value" nullable="true" pattern="" precision="17" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+        <additionalField key="Comment" value="Landed Cost"/>
       </column>
       <column comment="Weight" key="false" length="131089" name="weight" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value="Weight"/>
@@ -7297,11 +7270,8 @@
       <column comment="Weight Unit of Measure" key="false" length="10" name="weight_uom_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="Weight Unit of Measure"/>
       </column>
-      <column comment="Zona" key="false" length="2147483647" name="zona_moved0" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Zona"/>
-      </column>
-      <column comment="Zona" key="false" length="10" name="zona" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Zona"/>
+      <column comment="Zona Preventa" key="false" length="10" name="zona" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="Zona Preventa"/>
       </column>
       <additionalProperties key="Comment" value="Stock Move"/>
     </metadata>
@@ -7397,19 +7367,9 @@
         <mapperTableEntries name="purchase_line_id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="created_purchase_line_id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="sale_line_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="created_production_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="production_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="raw_material_production_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="unbuild_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="consume_unbuild_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="operation_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="workorder_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="bom_line_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="unit_factor" type="id_Double" nullable="true"/>
-        <mapperTableEntries name="is_done" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="landed_cost_value" type="id_Double" nullable="true"/>
         <mapperTableEntries name="weight" type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="weight_uom_id" type="id_Integer"/>
-        <mapperTableEntries name="zona_moved0" type="id_String" nullable="true"/>
         <mapperTableEntries name="zona" type="id_Integer" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row17" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
@@ -7456,7 +7416,6 @@
         <mapperTableEntries name="purchase_line_warn" type="id_String"/>
         <mapperTableEntries name="purchase_line_warn_msg" type="id_String" nullable="true"/>
         <mapperTableEntries name="can_be_expensed" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="tic_category_id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="landed_cost_ok" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="split_method" type="id_String" nullable="true"/>
         <mapperTableEntries name="life_time" type="id_Integer" nullable="true"/>
@@ -7480,6 +7439,7 @@
         <mapperTableEntries name="liters_container" type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="family_id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="marca_id" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="x_studio_field_PoAQo" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row18" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id" type="id_Integer"/>
@@ -7736,8 +7696,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="can_be_expensed"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="tic_category_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="landed_cost_ok"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="split_method"/>
@@ -7783,6 +7741,8 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="family_id"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="marca_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="x_studio_field_PoAQo"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
@@ -7917,9 +7877,6 @@
       <column comment="Can be Expensed" key="false" length="1" name="can_be_expensed" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
         <additionalField key="Comment" value="Can be Expensed"/>
       </column>
-      <column comment="TaxCloud Category" key="false" length="10" name="tic_category_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="TaxCloud Category"/>
-      </column>
       <column comment="Is a Landed Cost" key="false" length="1" name="landed_cost_ok" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
         <additionalField key="Comment" value="Is a Landed Cost"/>
       </column>
@@ -7988,6 +7945,9 @@
       </column>
       <column comment="Marca" key="false" length="10" name="marca_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="Marca"/>
+      </column>
+      <column comment="New Texto" key="false" length="2147483647" name="x_studio_field_PoAQo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value="New Texto"/>
       </column>
       <additionalProperties key="Comment" value="Product Template"/>
     </metadata>

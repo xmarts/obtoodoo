@@ -3601,31 +3601,6 @@
         <mapperTableEntries name="purchase_method" type="id_String" nullable="true"/>
         <mapperTableEntries name="purchase_line_warn" type="id_String"/>
         <mapperTableEntries name="purchase_line_warn_msg" type="id_String" nullable="true"/>
-        <mapperTableEntries name="can_be_expensed" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="tic_category_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="landed_cost_ok" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="split_method" type="id_String" nullable="true"/>
-        <mapperTableEntries name="life_time" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="use_time" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="removal_time" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="alert_time" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="website_description" type="id_String" nullable="true"/>
-        <mapperTableEntries name="website_size_x" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="website_size_y" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="website_sequence" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="website_meta_title" type="id_String" nullable="true"/>
-        <mapperTableEntries name="website_meta_description" type="id_String" nullable="true"/>
-        <mapperTableEntries name="website_meta_keywords" type="id_String" nullable="true"/>
-        <mapperTableEntries name="website_published" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="rating_last_value" type="id_Double" nullable="true"/>
-        <mapperTableEntries name="inventory_availability" type="id_String" nullable="true"/>
-        <mapperTableEntries name="available_threshold" type="id_Double" nullable="true"/>
-        <mapperTableEntries name="custom_message" type="id_String" nullable="true"/>
-        <mapperTableEntries name="hs_code" type="id_String" nullable="true"/>
-        <mapperTableEntries name="container_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="liters_container" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="family_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="marca_id" type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -3835,7 +3810,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1024">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="1024">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_6" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -3847,14 +3822,12 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="context.odoouser"/>
     <elementParameter field="PASSWORD" name="PASS" value="a0hiMTt35E8RjmP2Aj8k3w=="/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_gk7T4I6tEee1LJJOaIBo0Q - product_template" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;product_template&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA; id, &#xA; name, &#xA; sequence, &#xA; description, &#xA; description_purchase, &#xA; description_sale, &#xA; type, &#xA; rental, &#xA; categ_id, &#xA; list_price, &#xA; volume, &#xA; weight, &#xA; sale_ok, &#xA; purchase_ok, &#xA; uom_id, &#xA; uom_po_id, &#xA; company_id, &#xA; active, &#xA; color, &#xA; default_code, &#xA; message_last_post, &#xA; activity_date_deadline, &#xA; create_uid, &#xA; create_date, &#xA; write_uid, &#xA; write_date, &#xA; service_type, &#xA; sale_line_warn, &#xA; sale_line_warn_msg, &#xA; expense_policy, &#xA; invoice_policy, &#xA; responsible_id, &#xA; sale_delay, &#xA; tracking, &#xA; description_picking, &#xA; description_pickingout, &#xA; description_pickingin, &#xA; location_id, &#xA; warehouse_id, &#xA; purchase_method, &#xA; purchase_line_warn, &#xA; purchase_line_warn_msg, &#xA; can_be_expensed, &#xA; 1 as tic_category_id, &#xA; landed_cost_ok, &#xA; split_method, &#xA; life_time, &#xA; use_time, &#xA; removal_time, &#xA; alert_time, &#xA; website_description, &#xA; website_size_x, &#xA; website_size_y, &#xA; website_sequence, &#xA; website_meta_title, &#xA; website_meta_description, &#xA; website_meta_keywords, &#xA; website_published, &#xA; rating_last_value, &#xA; inventory_availability, &#xA; available_threshold, &#xA; custom_message, &#xA; hs_code, &#xA; container_id, &#xA; liters_container, &#xA; family_id, &#xA; marca_id&#xA;FROM product_template &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA; id, &#xA; name, &#xA; sequence, &#xA; description, &#xA; description_purchase, &#xA; description_sale, &#xA; type, &#xA; rental, &#xA; categ_id, &#xA; list_price, &#xA; volume, &#xA; weight, &#xA; sale_ok, &#xA; purchase_ok, &#xA; uom_id, &#xA; uom_po_id, &#xA; company_id, &#xA; active, &#xA; color, &#xA; default_code, &#xA; message_last_post, &#xA; activity_date_deadline, &#xA; create_uid, &#xA; create_date, &#xA; write_uid, &#xA; write_date, &#xA; service_type, &#xA; sale_line_warn, &#xA; sale_line_warn_msg, &#xA; expense_policy, &#xA; invoice_policy, &#xA; responsible_id, &#xA; sale_delay, &#xA; tracking, &#xA; description_picking, &#xA; description_pickingout, &#xA; description_pickingin, &#xA; location_id, &#xA; warehouse_id, &#xA; purchase_method, &#xA; purchase_line_warn, &#xA; purchase_line_warn_msg&#xA;FROM product_template&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -3917,6 +3890,16 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="write_date"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="service_type"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sale_line_warn"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sale_line_warn_msg"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="expense_policy"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_policy"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="responsible_id"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="sale_delay"/>
@@ -3933,37 +3916,11 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="warehouse_id"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="service_type"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="sale_line_warn"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="sale_line_warn_msg"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="expense_policy"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_policy"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="purchase_method"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="purchase_line_warn"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="purchase_line_warn_msg"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="can_be_expensed"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="produce_delay"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="purchase_requisition"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="hs_code"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="container_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="liters_container"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="family_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="marca_id"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
@@ -4094,81 +4051,6 @@
       </column>
       <column comment="Message for Purchase Order Line" key="false" length="2147483647" name="purchase_line_warn_msg" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value="Message for Purchase Order Line"/>
-      </column>
-      <column comment="Can be Expensed" key="false" length="1" name="can_be_expensed" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
-        <additionalField key="Comment" value="Can be Expensed"/>
-      </column>
-      <column comment="TaxCloud Category" key="false" length="10" name="tic_category_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="TaxCloud Category"/>
-      </column>
-      <column comment="Is a Landed Cost" key="false" length="1" name="landed_cost_ok" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
-        <additionalField key="Comment" value="Is a Landed Cost"/>
-      </column>
-      <column comment="Split Method" key="false" length="2147483647" name="split_method" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Split Method"/>
-      </column>
-      <column comment="Product Life Time" key="false" length="10" name="life_time" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Product Life Time"/>
-      </column>
-      <column comment="Product Use Time" key="false" length="10" name="use_time" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Product Use Time"/>
-      </column>
-      <column comment="Product Removal Time" key="false" length="10" name="removal_time" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Product Removal Time"/>
-      </column>
-      <column comment="Product Alert Time" key="false" length="10" name="alert_time" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Product Alert Time"/>
-      </column>
-      <column comment="Description for the website" key="false" length="2147483647" name="website_description" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Description for the website"/>
-      </column>
-      <column comment="Size X" key="false" length="10" name="website_size_x" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Size X"/>
-      </column>
-      <column comment="Size Y" key="false" length="10" name="website_size_y" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Size Y"/>
-      </column>
-      <column comment="Website Sequence" key="false" length="10" name="website_sequence" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Website Sequence"/>
-      </column>
-      <column comment="Website meta title" key="false" length="2147483647" name="website_meta_title" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Website meta title"/>
-      </column>
-      <column comment="Website meta description" key="false" length="2147483647" name="website_meta_description" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Website meta description"/>
-      </column>
-      <column comment="Website meta keywords" key="false" length="2147483647" name="website_meta_keywords" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Website meta keywords"/>
-      </column>
-      <column comment="Visible in Website" key="false" length="1" name="website_published" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
-        <additionalField key="Comment" value="Visible in Website"/>
-      </column>
-      <column comment="Rating Last Value" key="false" length="17" name="rating_last_value" nullable="true" pattern="" precision="17" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value="Rating Last Value"/>
-      </column>
-      <column comment="Inventory Availability" key="false" length="2147483647" name="inventory_availability" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Inventory Availability"/>
-      </column>
-      <column comment="Availability Threshold" key="false" length="17" name="available_threshold" nullable="true" pattern="" precision="17" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value="Availability Threshold"/>
-      </column>
-      <column comment="Custom Message" key="false" length="2147483647" name="custom_message" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Custom Message"/>
-      </column>
-      <column comment="HS Code" key="false" length="2147483647" name="hs_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="HS Code"/>
-      </column>
-      <column comment="Envase" key="false" length="10" name="container_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Envase"/>
-      </column>
-      <column comment="Litros por Envase" key="false" length="131089" name="liters_container" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Litros por Envase"/>
-      </column>
-      <column comment="Familia" key="false" length="10" name="family_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Familia"/>
-      </column>
-      <column comment="Marca" key="false" length="10" name="marca_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Marca"/>
       </column>
       <additionalProperties key="Comment" value="Product Template"/>
     </metadata>
@@ -4902,18 +4784,15 @@
   </node>
   <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1312">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_7" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_gk7T4I6tEee1LJJOaIBo0Q" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;127.0.0.1&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.odoohost"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5932&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;LATAF01&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="context.odooport"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.odoodb"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;odoo&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="context.odoouser"/>
     <elementParameter field="PASSWORD" name="PASS" value="O7UO/DWZIlA="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_gk7T4I6tEee1LJJOaIBo0Q - stock_picking" show="false"/>
@@ -4922,7 +4801,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;name\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;origin\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;note\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;backorder_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;move_type\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;state\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;group_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;priority\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;scheduled_date\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;date\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;date_done\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;location_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;location_dest_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;picking_type_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;partner_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;company_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;owner_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;printed\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;is_locked\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;message_last_post\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;activity_date_deadline\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;create_uid\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;create_date\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;write_uid\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;write_date\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;sale_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;carrier_price\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;carrier_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;volume\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;weight\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;carrier_tracking_ref\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;number_of_packages\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;weight_uom_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;deliveryman_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;zona\&quot;&#xA;FROM \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;  WHERE state='confirmed' &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  id, &#xA;  name, &#xA;  origin, &#xA;  note, &#xA;  backorder_id, &#xA;  move_type, &#xA;  state, &#xA;  group_id, &#xA;  priority, &#xA;  scheduled_date, &#xA;  date, &#xA;  date_done, &#xA;  location_id, &#xA;  location_dest_id, &#xA;  picking_type_id, &#xA;  partner_id, &#xA;  company_id, &#xA;  owner_id, &#xA;  printed, &#xA;  is_locked, &#xA;  message_last_post, &#xA;  activity_date_deadline, &#xA;  create_uid, &#xA;  create_date, &#xA;  write_uid, &#xA;  write_date, &#xA;  sale_id, &#xA;  carrier_price, &#xA;  carrier_id, &#xA;  volume, &#xA;  weight, &#xA;  carrier_tracking_ref, &#xA;  number_of_packages, &#xA;  weight_uom_id, &#xA;  deliveryman_id, &#xA;  zona&#xA;FROM stock_picking  WHERE state='confirmed' &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -5122,7 +5001,6 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1312">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_10" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -5255,17 +5133,14 @@
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="1312">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_6" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_H5W6sNQJEee5adDk8tXtDg" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;lx_lataf&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;lxtrack&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.myhost"/>
+    <elementParameter field="TEXT" name="PORT" value="context.myport"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.mydb"/>
+    <elementParameter field="TEXT" name="USER" value="context.myuser"/>
     <elementParameter field="PASSWORD" name="PASS" value="a0hiMTt35E8RjmP2Aj8k3w=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;lxtrack_orden&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
@@ -5507,18 +5382,15 @@
   </node>
   <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1408">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_8" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_gk7T4I6tEee1LJJOaIBo0Q" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;127.0.0.1&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.odoohost"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5932&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;LATAF01&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="context.odooport"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.odoodb"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;odoo&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="context.odoouser"/>
     <elementParameter field="PASSWORD" name="PASS" value="O7UO/DWZIlA="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_gk7T4I6tEee1LJJOaIBo0Q - stock_picking" show="false"/>
@@ -5527,7 +5399,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;name\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;origin\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;note\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;backorder_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;move_type\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;state\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;group_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;priority\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;scheduled_date\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;date\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;date_done\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;location_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;location_dest_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;picking_type_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;partner_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;company_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;owner_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;printed\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;is_locked\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;message_last_post\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;activity_date_deadline\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;create_uid\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;create_date\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;write_uid\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;write_date\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;sale_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;carrier_price\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;carrier_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;volume\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;weight\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;carrier_tracking_ref\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;number_of_packages\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;weight_uom_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;deliveryman_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;.\&quot;zona\&quot;&#xA;FROM \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_picking\&quot;  WHERE state='confirmed' &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  id, &#xA;  name, &#xA;  origin, &#xA;  note, &#xA;  backorder_id, &#xA;  move_type, &#xA;  state, &#xA;  group_id, &#xA;  priority, &#xA;  scheduled_date, &#xA;  date, &#xA;  date_done, &#xA;  location_id, &#xA;  location_dest_id, &#xA;  picking_type_id, &#xA;  partner_id, &#xA;  company_id, &#xA;  owner_id, &#xA;  printed, &#xA;  is_locked, &#xA;  message_last_post, &#xA;  activity_date_deadline, &#xA;  create_uid, &#xA;  create_date, &#xA;  write_uid, &#xA;  write_date, &#xA;  sale_id, &#xA;  carrier_price, &#xA;  carrier_id, &#xA;  volume, &#xA;  weight, &#xA;  carrier_tracking_ref, &#xA;  number_of_packages, &#xA;  weight_uom_id, &#xA;  deliveryman_id, &#xA;  zona&#xA;FROM stock_picking  WHERE state='confirmed' &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -5727,7 +5599,6 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1408">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_11" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -5905,17 +5776,14 @@
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="1408">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_10" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_H5W6sNQJEee5adDk8tXtDg" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;lx_lataf&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;lxtrack&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.myhost"/>
+    <elementParameter field="TEXT" name="PORT" value="context.myport"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.mydb"/>
+    <elementParameter field="TEXT" name="USER" value="context.myuser"/>
     <elementParameter field="PASSWORD" name="PASS" value="a0hiMTt35E8RjmP2Aj8k3w=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;lxtrack_orden_agenda&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
@@ -6069,27 +5937,22 @@
   </node>
   <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1504">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_9" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_gk7T4I6tEee1LJJOaIBo0Q" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;127.0.0.1&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.odoohost"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5932&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;LATAF01&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="context.odooport"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.odoodb"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;odoo&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="context.odoouser"/>
     <elementParameter field="PASSWORD" name="PASS" value="O7UO/DWZIlA="/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_gk7T4I6tEee1LJJOaIBo0Q - stock_move" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;stock_move&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;name\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;sequence\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;priority\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;create_date\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;date\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;company_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;date_expected\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;product_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;ordered_qty\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;product_qty\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;product_uom_qty\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;product_uom\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;product_packaging\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;location_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;location_dest_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;partner_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;picking_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;note\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;state\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;price_unit\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;origin\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;procure_method\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;scrapped\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;group_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;rule_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;push_rule_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;propagate\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;picking_type_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;inventory_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;origin_returned_move_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;restrict_partner_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;warehouse_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;additional\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;reference\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;create_uid\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;write_uid\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;write_date\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;to_refund\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;value\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;remaining_qty\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;remaining_value\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;purchase_line_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;created_purchase_line_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;sale_line_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;created_production_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;production_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;raw_material_production_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;unbuild_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;consume_unbuild_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;operation_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;workorder_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;bom_line_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;unit_factor\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;is_done\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;weight\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;weight_uom_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;zona_moved0\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot;.\&quot;zona\&quot;&#xA;FROM \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;stock_move\&quot; where picking_id in (select id from stock_move  WHERE state='confirmed')&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  id, &#xA;  name, &#xA;  sequence, &#xA;  priority, &#xA;  create_date, &#xA;  date, &#xA;  company_id, &#xA;  date_expected, &#xA;  product_id, &#xA;  ordered_qty, &#xA;  product_qty, &#xA;  product_uom_qty, &#xA;  product_uom, &#xA;  product_packaging, &#xA;  location_id, &#xA;  location_dest_id, &#xA;  partner_id, &#xA;  picking_id, &#xA;  note, &#xA;  state, &#xA;  price_unit, &#xA;  origin, &#xA;  procure_method, &#xA;  scrapped, &#xA;  group_id, &#xA;  rule_id, &#xA;  push_rule_id, &#xA;  propagate, &#xA;  picking_type_id, &#xA;  inventory_id, &#xA;  origin_returned_move_id, &#xA;  restrict_partner_id, &#xA;  warehouse_id, &#xA;  additional, &#xA;  reference, &#xA;  create_uid, &#xA;  write_uid, &#xA;  write_date, &#xA;  to_refund, &#xA;  value, &#xA;  remaining_qty, &#xA;  remaining_value, &#xA;  purchase_line_id, &#xA;  created_purchase_line_id, &#xA;  sale_line_id, &#xA;  zona&#xA;FROM stock_move where picking_id in (select id from stock_move  WHERE state='confirmed') &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -6190,38 +6053,12 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="sale_line_id"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="created_production_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="production_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="raw_material_production_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="unbuild_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="consume_unbuild_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="operation_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="workorder_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="bom_line_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="unit_factor"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="is_done"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="weight"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="weight_uom_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="zona_moved0"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="zona"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="stock_move" name="tPostgresqlInput_9">
+    <metadata comment="Stock Move" connector="FLOW" label="stock_move" name="stock_move" type="TABLE">
       <column comment="" defaultValue="nextval('stock_move_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -6357,54 +6194,14 @@
       <column comment="Sale Line" key="false" length="10" name="sale_line_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="Sale Line"/>
       </column>
-      <column comment="Created Production Order" key="false" length="10" name="created_production_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Created Production Order"/>
-      </column>
-      <column comment="Production Order for finished products" key="false" length="10" name="production_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Production Order for finished products"/>
-      </column>
-      <column comment="Production Order for raw materials" key="false" length="10" name="raw_material_production_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Production Order for raw materials"/>
-      </column>
-      <column comment="Unbuild Order" key="false" length="10" name="unbuild_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Unbuild Order"/>
-      </column>
-      <column comment="Consume Unbuild Order" key="false" length="10" name="consume_unbuild_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Consume Unbuild Order"/>
-      </column>
-      <column comment="Operation To Consume" key="false" length="10" name="operation_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Operation To Consume"/>
-      </column>
-      <column comment="Work Order To Consume" key="false" length="10" name="workorder_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Work Order To Consume"/>
-      </column>
-      <column comment="BoM Line" key="false" length="10" name="bom_line_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="BoM Line"/>
-      </column>
-      <column comment="Unit Factor" key="false" length="17" name="unit_factor" nullable="true" pattern="" precision="17" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value="Unit Factor"/>
-      </column>
-      <column comment="Done" key="false" length="1" name="is_done" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
-        <additionalField key="Comment" value="Done"/>
-      </column>
-      <column comment="Weight" key="false" length="131089" name="weight" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Weight"/>
-      </column>
-      <column comment="Weight Unit of Measure" key="false" length="10" name="weight_uom_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Weight Unit of Measure"/>
-      </column>
-      <column comment="Zona" key="false" length="2147483647" name="zona_moved0" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Zona"/>
-      </column>
-      <column comment="Zona" key="false" length="10" name="zona" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Zona"/>
+      <column comment="Zona Preventa" key="false" length="10" name="zona" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="Zona Preventa"/>
       </column>
       <additionalProperties key="Comment" value="Stock Move"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1504">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_12" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -6493,28 +6290,31 @@
         <mapperTableEntries name="purchase_line_id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="created_purchase_line_id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="sale_line_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="created_production_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="production_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="raw_material_production_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="unbuild_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="consume_unbuild_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="operation_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="workorder_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="bom_line_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="unit_factor" type="id_Double" nullable="true"/>
-        <mapperTableEntries name="is_done" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="weight" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="weight_uom_id" type="id_Integer"/>
-        <mapperTableEntries name="zona_moved0" type="id_String" nullable="true"/>
         <mapperTableEntries name="zona" type="id_Integer" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row17" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row18" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="id" type="id_Integer"/>
+        <mapperTableEntries name="codigo" expression="" type="id_String"/>
+        <mapperTableEntries name="descripcion" type="id_String"/>
+        <mapperTableEntries name="unidad" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="precio_unitario" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="sku" type="id_String"/>
+        <mapperTableEntries name="favorito" type="id_String"/>
+        <mapperTableEntries name="img_file" type="id_String"/>
+        <mapperTableEntries name="active" type="id_Object"/>
+        <mapperTableEntries name="insert_date" type="id_Date"/>
+        <mapperTableEntries name="mod_date" type="id_Date"/>
+        <mapperTableEntries name="id_usuario_creator" expression="" type="id_Integer"/>
+        <mapperTableEntries name="id_usuario_last_editor" expression="" type="id_Integer"/>
+        <mapperTableEntries name="id_local" expression="" type="id_Integer"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id" expression="row16.product_id " type="id_Integer"/>
         <mapperTableEntries name="name" type="id_String"/>
         <mapperTableEntries name="sequence" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="description" type="id_String" nullable="true"/>
         <mapperTableEntries name="description_purchase" type="id_String" nullable="true"/>
-        <mapperTableEntries name="description_sale" expression="" type="id_String" nullable="true"/>
+        <mapperTableEntries name="description_sale" type="id_String" nullable="true"/>
         <mapperTableEntries name="type" type="id_String"/>
         <mapperTableEntries name="rental" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="categ_id" type="id_Integer"/>
@@ -6552,7 +6352,6 @@
         <mapperTableEntries name="purchase_line_warn" type="id_String"/>
         <mapperTableEntries name="purchase_line_warn_msg" type="id_String" nullable="true"/>
         <mapperTableEntries name="can_be_expensed" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="tic_category_id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="landed_cost_ok" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="split_method" type="id_String" nullable="true"/>
         <mapperTableEntries name="life_time" type="id_Integer" nullable="true"/>
@@ -6576,38 +6375,20 @@
         <mapperTableEntries name="liters_container" type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="family_id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="marca_id" type="id_Integer" nullable="true"/>
-      </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row18" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="id" type="id_Integer"/>
-        <mapperTableEntries name="codigo" expression="" type="id_String"/>
-        <mapperTableEntries name="descripcion" type="id_String"/>
-        <mapperTableEntries name="unidad" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="precio_unitario" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="sku" type="id_String"/>
-        <mapperTableEntries name="favorito" type="id_String"/>
-        <mapperTableEntries name="img_file" type="id_String"/>
-        <mapperTableEntries name="active" type="id_Object"/>
-        <mapperTableEntries name="insert_date" type="id_Date"/>
-        <mapperTableEntries name="mod_date" type="id_Date"/>
-        <mapperTableEntries name="id_usuario_creator" type="id_Integer"/>
-        <mapperTableEntries name="id_usuario_last_editor" expression="" type="id_Integer"/>
-        <mapperTableEntries name="id_local" expression="row17.id" type="id_Integer"/>
+        <mapperTableEntries name="x_studio_field_PoAQo" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="1504">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_8" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_H5W6sNQJEee5adDk8tXtDg" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;lx_lataf&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;lxtrack&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.myhost"/>
+    <elementParameter field="TEXT" name="PORT" value="context.myport"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.mydb"/>
+    <elementParameter field="TEXT" name="USER" value="context.myuser"/>
     <elementParameter field="PASSWORD" name="PASS" value="a0hiMTt35E8RjmP2Aj8k3w=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;lxtrack_pedido_entrega&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
@@ -6715,20 +6496,126 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="1600">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_10" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_gk7T4I6tEee1LJJOaIBo0Q" show="false"/>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1600">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_8" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="context.myhost"/>
+    <elementParameter field="TEXT" name="PORT" value="context.myport"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.mydb"/>
+    <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="context.myuser"/>
+    <elementParameter field="PASSWORD" name="PASS" value="a0hiMTt35E8RjmP2Aj8k3w=="/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_H5W6sNQJEee5adDk8tXtDg - lxtrack_cat_producto" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;lxtrack_cat_producto&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `lxtrack_cat_producto`.`id`, &#xA;  `lxtrack_cat_producto`.`codigo`, &#xA;  `lxtrack_cat_producto`.`descripcion`, &#xA;  `lxtrack_cat_producto`.`unidad`, &#xA;  `lxtrack_cat_producto`.`precio_unitario`, &#xA;  `lxtrack_cat_producto`.`sku`, &#xA;  `lxtrack_cat_producto`.`favorito`, &#xA;  `lxtrack_cat_producto`.`img_file`, &#xA;  `lxtrack_cat_producto`.`active`, &#xA;  `lxtrack_cat_producto`.`insert_date`, &#xA;  `lxtrack_cat_producto`.`mod_date`, &#xA;  `lxtrack_cat_producto`.`id_usuario_creator`, &#xA;  `lxtrack_cat_producto`.`id_usuario_last_editor`, &#xA;  `lxtrack_cat_producto`.`id_local`&#xA;FROM `lxtrack_cat_producto`&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="codigo"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="descripcion"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="unidad"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="precio_unitario"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sku"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="favorito"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="img_file"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="active"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="insert_date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="mod_date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="id_usuario_creator"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="id_usuario_last_editor"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="id_local"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="lxtrack_cat_producto" name="tMysqlInput_8">
+      <column comment="" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="13" name="codigo" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="100" name="descripcion" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="1000" key="false" length="10" name="unidad" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="0.00" key="false" length="8" name="precio_unitario" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="128" name="sku" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'0'" key="false" length="-1" name="favorito" nullable="false" pattern="" precision="0" sourceType="ENUM" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="30" name="img_file" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'1'" key="false" length="2" name="active" nullable="false" pattern="" precision="0" sourceType="ENUM" type="id_Object" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="19" name="insert_date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="CURRENT_TIMESTAMP" key="false" length="19" name="mod_date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="0" key="false" length="10" name="id_usuario_creator" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="0" key="false" length="10" name="id_usuario_last_editor" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="id_local" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" defaultValue="'P'" key="false" length="2" name="prod_type" nullable="false" pattern="" precision="0" sourceType="ENUM" type="id_Object" usefulColumn="false">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1600">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_1" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;127.0.0.1&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.odoohost"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5932&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;LATAF01&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="context.odooport"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.odoodb"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;odoo&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="context.odoouser"/>
     <elementParameter field="PASSWORD" name="PASS" value="O7UO/DWZIlA="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_gk7T4I6tEee1LJJOaIBo0Q - product_template" show="false"/>
@@ -6737,7 +6624,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;name\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;sequence\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;description\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;description_purchase\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;description_sale\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;type\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;rental\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;categ_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;list_price\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;volume\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;weight\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;sale_ok\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;purchase_ok\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;uom_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;uom_po_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;company_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;active\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;color\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;default_code\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;message_last_post\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;activity_date_deadline\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;create_uid\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;create_date\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;write_uid\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;write_date\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;responsible_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;sale_delay\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;tracking\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;description_picking\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;description_pickingout\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;description_pickingin\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;location_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;warehouse_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;service_type\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;sale_line_warn\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;sale_line_warn_msg\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;expense_policy\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;invoice_policy\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;purchase_method\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;purchase_line_warn\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;purchase_line_warn_msg\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;can_be_expensed\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;produce_delay\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;purchase_requisition\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;hs_code\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;container_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;liters_container\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;family_id\&quot;, &#xA;  \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;marca_id\&quot;&#xA;FROM \&quot;pascual\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;name\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;sequence\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;description\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;description_purchase\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;description_sale\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;type\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;rental\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;categ_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;list_price\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;volume\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;weight\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;sale_ok\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;purchase_ok\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;uom_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;uom_po_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;company_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;active\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;color\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;default_code\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;message_last_post\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;activity_date_deadline\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;create_uid\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;create_date\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;write_uid\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;write_date\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;service_type\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;sale_line_warn\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;sale_line_warn_msg\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;expense_policy\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;invoice_policy\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;responsible_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;sale_delay\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;tracking\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;description_picking\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;description_pickingout\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;description_pickingin\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;location_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;warehouse_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;purchase_method\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;purchase_line_warn\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;purchase_line_warn_msg\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;can_be_expensed\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;landed_cost_ok\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;split_method\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;life_time\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;use_time\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;removal_time\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;alert_time\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;website_description\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;website_size_x\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;website_size_y\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;website_sequence\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;website_meta_title\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;website_meta_description\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;website_meta_keywords\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;website_published\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;rating_last_value\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;inventory_availability\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;available_threshold\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;custom_message\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;hs_code\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;container_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;liters_container\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;family_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;marca_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;.\&quot;x_studio_field_PoAQo\&quot;&#xA;FROM \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;product_template\&quot;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -6800,6 +6687,16 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="write_date"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="service_type"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sale_line_warn"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sale_line_warn_msg"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="expense_policy"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_policy"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="responsible_id"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="sale_delay"/>
@@ -6816,16 +6713,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="warehouse_id"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="service_type"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="sale_line_warn"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="sale_line_warn_msg"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="expense_policy"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="invoice_policy"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="purchase_method"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="purchase_line_warn"/>
@@ -6834,9 +6721,41 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="can_be_expensed"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="produce_delay"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="landed_cost_ok"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="purchase_requisition"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="split_method"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="life_time"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="use_time"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="removal_time"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="alert_time"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="website_description"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="website_size_x"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="website_size_y"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="website_sequence"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="website_meta_title"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="website_meta_description"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="website_meta_keywords"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="website_published"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="rating_last_value"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="inventory_availability"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="available_threshold"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="custom_message"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="hs_code"/>
       <elementValue elementRef="TRIM" value="false"/>
@@ -6848,10 +6767,12 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="marca_id"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="x_studio_field_PoAQo"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata comment="Product Template" connector="FLOW" label="product_template" name="product_template" type="TABLE">
+    <metadata connector="FLOW" label="product_template" name="tPostgresqlInput_1">
       <column comment="" defaultValue="nextval('product_template_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -6981,9 +6902,6 @@
       <column comment="Can be Expensed" key="false" length="1" name="can_be_expensed" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
         <additionalField key="Comment" value="Can be Expensed"/>
       </column>
-      <column comment="TaxCloud Category" key="false" length="10" name="tic_category_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="TaxCloud Category"/>
-      </column>
       <column comment="Is a Landed Cost" key="false" length="1" name="landed_cost_ok" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
         <additionalField key="Comment" value="Is a Landed Cost"/>
       </column>
@@ -7053,119 +6971,10 @@
       <column comment="Marca" key="false" length="10" name="marca_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="Marca"/>
       </column>
+      <column comment="New Texto" key="false" length="2147483647" name="x_studio_field_PoAQo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value="New Texto"/>
+      </column>
       <additionalProperties key="Comment" value="Product Template"/>
-    </metadata>
-  </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1600">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_8" show="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_H5W6sNQJEee5adDk8tXtDg" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;lx_lataf&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;lxtrack&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="a0hiMTt35E8RjmP2Aj8k3w=="/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_H5W6sNQJEee5adDk8tXtDg - lxtrack_cat_producto" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;lxtrack_cat_producto&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `lxtrack_cat_producto`.`id`, &#xA;  `lxtrack_cat_producto`.`codigo`, &#xA;  `lxtrack_cat_producto`.`descripcion`, &#xA;  `lxtrack_cat_producto`.`unidad`, &#xA;  `lxtrack_cat_producto`.`precio_unitario`, &#xA;  `lxtrack_cat_producto`.`sku`, &#xA;  `lxtrack_cat_producto`.`favorito`, &#xA;  `lxtrack_cat_producto`.`img_file`, &#xA;  `lxtrack_cat_producto`.`active`, &#xA;  `lxtrack_cat_producto`.`insert_date`, &#xA;  `lxtrack_cat_producto`.`mod_date`, &#xA;  `lxtrack_cat_producto`.`id_usuario_creator`, &#xA;  `lxtrack_cat_producto`.`id_usuario_last_editor`, &#xA;  `lxtrack_cat_producto`.`id_local`&#xA;FROM `lxtrack_cat_producto`&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="codigo"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="descripcion"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="unidad"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="precio_unitario"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="sku"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="favorito"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="img_file"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="active"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="insert_date"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="mod_date"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="id_usuario_creator"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="id_usuario_last_editor"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="id_local"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="lxtrack_cat_producto" name="tMysqlInput_8">
-      <column comment="" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="13" name="codigo" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="100" name="descripcion" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="1000" key="false" length="10" name="unidad" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="0.00" key="false" length="8" name="precio_unitario" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="128" name="sku" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="'0'" key="false" length="-1" name="favorito" nullable="false" pattern="" precision="0" sourceType="ENUM" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="30" name="img_file" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="'1'" key="false" length="2" name="active" nullable="false" pattern="" precision="0" sourceType="ENUM" type="id_Object" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="19" name="insert_date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="CURRENT_TIMESTAMP" key="false" length="19" name="mod_date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="0" key="false" length="10" name="id_usuario_creator" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="0" key="false" length="10" name="id_usuario_last_editor" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="id_local" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="'P'" key="false" length="2" name="prod_type" nullable="false" pattern="" precision="0" sourceType="ENUM" type="id_Object" usefulColumn="false">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
   <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="352">
@@ -8290,7 +8099,6 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMysqlInput_6" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_6" target="tPostgresqlInput_7">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk11" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="sync" lineStyle="0" metaname="sync" offsetLabelX="0" offsetLabelY="0" source="tMap_9" target="tMysqlOutput_5">
@@ -8299,51 +8107,41 @@
   </connection>
   <connection connectorName="FLOW" label="row14" lineStyle="0" metaname="tPostgresqlInput_7" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_7" target="tMap_10">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row14" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlInput_7" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_7" target="tPostgresqlInput_8">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk12" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="orden_entrega" lineStyle="0" metaname="orden_entrega" offsetLabelX="0" offsetLabelY="0" source="tMap_10" target="tMysqlOutput_6">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="orden_entrega" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tPostgresqlInput_8" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_8" target="tMap_11">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlInput_8" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_8" target="tPostgresqlInput_9">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk13" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="copyOfentrega_agenda" lineStyle="0" metaname="copyOfentrega_agenda" offsetLabelX="0" offsetLabelY="0" source="tMap_11" target="tMysqlOutput_10">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="copyOfentrega_agenda" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="tPostgresqlInput_9" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_9" target="tMap_12">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row16" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="entrega_lineas" lineStyle="0" metaname="entrega_lineas" offsetLabelX="0" offsetLabelY="0" source="tMap_12" target="tMysqlOutput_8">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="entrega_lineas" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row17" lineStyle="8" metaname="tPostgresqlInput_10" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_10" target="tMap_12">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row17" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row18" lineStyle="8" metaname="tMysqlInput_8" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_8" target="tMap_12">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row18" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="8" metaname="tPostgresqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_1" target="tMap_12">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tPostgresqlInput_11" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_11" target="tMap_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <TalendMetadata:DatabaseConnection xmi:id="_uR8EMI6yEee1LJJOaIBo0Q" name="Odoo" id="_gk7T4I6tEee1LJJOaIBo0Q" label="Odoo" dataPackage="_Y6OrgA3BEei0i4uTDb6Glg _LYnGANl-Eee7Vutk1Nhghw _a02mQNQHEee5adDk8tXtDg" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://127.0.0.1:5432/pascual_test" dbVersionString="PRIOR_TO_V9" Port="5432" Username="odoo" Password="88hndU0MGUk=" ServerName="127.0.0.1" DatasourceName="" FileFieldName="" SID="pascual_test" SqlSynthax="SQL Syntax" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="public">
+  <TalendMetadata:DatabaseConnection xmi:id="_QaxZIES6Eei1N4raTfPvUw" name="Copy_of_Odoo" id="_gk7T4I6tEee1LJJOaIBo0Q" label="Copy_of_Odoo" dataPackage="_Y6OrgA3BEei0i4uTDb6Glg _LYnGANl-Eee7Vutk1Nhghw _a02mQNQHEee5adDk8tXtDg" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://127.0.0.1:5432/pascual_test" dbVersionString="PRIOR_TO_V9" Port="5432" Username="odoo" Password="88hndU0MGUk=" ServerName="127.0.0.1" DatasourceName="" FileFieldName="" SID="pascual_test" SqlSynthax="SQL Syntax" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="public">
     <taggedValue xmi:id="_uR8EMY6yEee1LJJOaIBo0Q" tag="Is Conn Need Reload" value="true"/>
     <taggedValue xmi:id="_uR_ukI6yEee1LJJOaIBo0Q" tag="package filter" value=""/>
     <taggedValue xmi:id="_uR_ukY6yEee1LJJOaIBo0Q" tag="Status" value=""/>
@@ -15,7 +15,7 @@
     <parameters xmi:id="_uR8EMo6yEee1LJJOaIBo0Q" key="CONN_PARA_KEY_USERNAME" value="odoo"/>
     <parameters xmi:id="_Jbo3sNQHEee5adDk8tXtDg" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
   </TalendMetadata:DatabaseConnection>
-  <orgomg.cwm.resource.relational:Catalog xmi:id="_Y6OrgA3BEei0i4uTDb6Glg" name="pascual_test" dataManager="_uR8EMI6yEee1LJJOaIBo0Q">
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_Y6OrgA3BEei0i4uTDb6Glg" name="pascual_test" dataManager="_QaxZIES6Eei1N4raTfPvUw">
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_Y6OrgQ3BEei0i4uTDb6Glg" name="public">
       <ownedElement xsi:type="relational:TdTable" xmi:id="_iouxIA3BEei0i4uTDb6Glg" name="sale_order" id="_iouKEA3BEei0i4uTDb6Glg" comment="Quotation" label="sale_order" tableType="TABLE">
         <taggedValue xmi:id="_iouxIQ3BEei0i4uTDb6Glg" tag="Comment" value="Quotation"/>
@@ -248,7 +248,7 @@
       </ownedElement>
     </ownedElement>
   </orgomg.cwm.resource.relational:Catalog>
-  <orgomg.cwm.resource.relational:Catalog xmi:id="_LYnGANl-Eee7Vutk1Nhghw" name="pascual" dataManager="_uR8EMI6yEee1LJJOaIBo0Q">
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_LYnGANl-Eee7Vutk1Nhghw" name="pascual" dataManager="_QaxZIES6Eei1N4raTfPvUw">
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_LYnGAdl-Eee7Vutk1Nhghw" name="public">
       <ownedElement xsi:type="relational:TdTable" xmi:id="_RGAtsNl-Eee7Vutk1Nhghw" name="sale_order_line" id="_RF_fkNl-Eee7Vutk1Nhghw" comment="Sales Order Line" label="sale_order_line" tableType="TABLE">
         <taggedValue xmi:id="_RGBUwNl-Eee7Vutk1Nhghw" tag="Comment" value="Sales Order Line"/>
@@ -1272,7 +1272,7 @@
       </ownedElement>
     </ownedElement>
   </orgomg.cwm.resource.relational:Catalog>
-  <orgomg.cwm.resource.relational:Catalog xmi:id="_a02mQNQHEee5adDk8tXtDg" name="embotella_test" dataManager="_uR8EMI6yEee1LJJOaIBo0Q">
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_a02mQNQHEee5adDk8tXtDg" name="embotella_test" dataManager="_QaxZIES6Eei1N4raTfPvUw">
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_a02mQdQHEee5adDk8tXtDg" name="public">
       <ownedElement xsi:type="relational:TdTable" xmi:id="_nwD4cNQHEee5adDk8tXtDg" name="route_order" id="_nwAOENQHEee5adDk8tXtDg" comment="route.order" label="route_order" tableType="TABLE">
         <taggedValue xmi:id="_nwD4cdQHEee5adDk8tXtDg" tag="Comment" value="route.order"/>

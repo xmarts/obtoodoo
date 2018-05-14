@@ -210,14 +210,12 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="context.odoouser"/>
     <elementParameter field="PASSWORD" name="PASS" value="O7UO/DWZIlA="/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_gk7T4I6tEee1LJJOaIBo0Q - lx_res_partner" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;lx_res_partner&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;id, &#xA; name, &#xA; company_id, &#xA; display_name, &#xA; date, &#xA; title, &#xA; parent_id, &#xA; ref, &#xA; lang, &#xA; tz, &#xA; user_id, &#xA; vat, &#xA; comment,&#xA; phone,&#xA; mobile,&#xA; city,&#xA; street,&#xA; street2,&#xA; zip,&#xA; write_uid, &#xA; write_date&#xA;FROM lx_res_partner&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;id, &#xA; name, &#xA; company_id, &#xA; display_name, &#xA; date, &#xA; title, &#xA; parent_id, &#xA; ref, &#xA; lang, &#xA; tz, &#xA; user_id, &#xA; vat, &#xA; comment,&#xA; phone,&#xA; mobile,&#xA; city,&#xA; street,&#xA; street2,&#xA; zip,&#xA; write_uid, &#xA; write_date,&#xA; partner_latitude,&#xA;partner_longitude,&#xA; pricelist&#xA;FROM lx_res_partner&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -269,6 +267,12 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="write_uid"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="write_date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="partner_latitude"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="partner_longitude"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="pricelist"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
@@ -337,6 +341,9 @@
       <column comment="" key="false" length="29" name="write_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="-1" name="partner_latitude" nullable="true" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="partner_longitude" nullable="true" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="pricelist" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="10" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
@@ -352,54 +359,6 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="lxtrack_cliente" name="cliente">
-      <column comment="" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="id_local" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="100" name="razon_social" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="100" name="nombre_comercial" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="13" name="RFC" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="codigo_cliente" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="'0'" key="false" length="2" name="autorizado" nullable="false" pattern="" precision="0" sourceType="ENUM" type="id_Object" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="'P'" key="false" length="2" name="capture" nullable="false" pattern="" precision="0" sourceType="ENUM" type="id_Object" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="'1'" key="false" length="2" name="active" nullable="false" pattern="" precision="0" sourceType="ENUM" type="id_Object" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="id_inactive_reason" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="19" name="insert_date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="CURRENT_TIMESTAMP" key="false" length="19" name="mod_date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="0" key="false" length="10" name="id_usuario_creator" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" defaultValue="0" key="false" length="10" name="id_usuario_last_editor" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="id_sesion_app" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <additionalProperties key="Comment" value=""/>
-    </metadata>
     <metadata connector="FLOW" label="lxtrack_cliente" name="cliente2">
       <column comment="" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
@@ -457,23 +416,6 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="cliente">
-        <mapperTableEntries name="id" expression="row2.id " type="id_Integer"/>
-        <mapperTableEntries name="id_local" expression="row2.id " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="razon_social" expression="row2.display_name " type="id_String"/>
-        <mapperTableEntries name="nombre_comercial" expression="row2.display_name " type="id_String"/>
-        <mapperTableEntries name="RFC" expression="row2.vat+&quot; &quot;" type="id_String"/>
-        <mapperTableEntries name="codigo_cliente" expression="row2.ref" type="id_String"/>
-        <mapperTableEntries name="autorizado" expression="&quot;1&quot;" type="id_Object"/>
-        <mapperTableEntries name="capture" expression="&quot;P&quot;" type="id_Object"/>
-        <mapperTableEntries name="active" expression="&quot;1&quot;" type="id_Object"/>
-        <mapperTableEntries name="id_inactive_reason" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="insert_date" expression="row2.write_date " type="id_Date"/>
-        <mapperTableEntries name="mod_date" expression="row2.write_date " type="id_Date"/>
-        <mapperTableEntries name="id_usuario_creator" expression="0" type="id_Integer"/>
-        <mapperTableEntries name="id_usuario_last_editor" expression="0" type="id_Integer"/>
-        <mapperTableEntries name="id_sesion_app" type="id_Integer" nullable="true"/>
-      </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="cliente2">
         <mapperTableEntries name="id" expression="row2.id" type="id_Integer"/>
         <mapperTableEntries name="id_local" expression="row2.id " type="id_Integer" nullable="true"/>
@@ -481,7 +423,7 @@
         <mapperTableEntries name="nombre_comercial" expression="row2.display_name " type="id_String"/>
         <mapperTableEntries name="RFC" expression="row2.vat+&quot; &quot;" type="id_String"/>
         <mapperTableEntries name="codigo_cliente" expression="row2.ref" type="id_String"/>
-        <mapperTableEntries name="id_lista_precios" expression="1" type="id_Integer"/>
+        <mapperTableEntries name="id_lista_precios" expression="" type="id_Integer"/>
         <mapperTableEntries name="id_categoria_sector" expression="1" type="id_Integer"/>
         <mapperTableEntries name="autorizado" expression="&quot;1&quot;" type="id_Object" nullable="true"/>
         <mapperTableEntries name="capture" expression="&quot;P&quot;" type="id_Object" nullable="true"/>
@@ -515,6 +457,9 @@
         <mapperTableEntries name="zip" type="id_String" nullable="true"/>
         <mapperTableEntries name="write_uid" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="write_date" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="partner_latitude" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="partner_longitude" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="pricelist" type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -773,7 +718,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;id, &#xA; name, &#xA; company_id, &#xA; display_name, &#xA; date, &#xA; title, &#xA; parent_id, &#xA; ref, &#xA; lang, &#xA; tz, &#xA; user_id, &#xA; vat, &#xA; comment,&#xA; phone,&#xA; mobile,&#xA; city,&#xA; street,&#xA; street2,&#xA; zip,&#xA; write_uid, &#xA; write_date&#xA;FROM lx_res_partner&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;id, &#xA; name, &#xA; company_id, &#xA; display_name, &#xA; date, &#xA; title, &#xA; parent_id, &#xA; ref, &#xA; lang, &#xA; tz, &#xA; user_id, &#xA; vat, &#xA; comment,&#xA; phone,&#xA; mobile,&#xA; city,&#xA; street,&#xA; street2,&#xA; zip,&#xA; write_uid, &#xA; write_date,&#xA; partner_latitude,&#xA;partner_longitude&#xA;FROM lx_res_partner&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -825,6 +770,10 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="write_uid"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="write_date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="partner_latitude"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="partner_longitude"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
@@ -893,6 +842,8 @@
       <column comment="" key="false" length="29" name="write_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="-1" name="partner_latitude" nullable="true" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="partner_longitude" nullable="true" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
@@ -981,18 +932,18 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="direccion">
         <mapperTableEntries name="id" expression="row4.id " type="id_Integer"/>
         <mapperTableEntries name="id_cliente" expression="row4.id " type="id_Integer"/>
         <mapperTableEntries name="clave_estado" expression="&quot;DIF&quot;" type="id_String"/>
         <mapperTableEntries name="ciudad" expression="row4.city " type="id_String"/>
-        <mapperTableEntries name="colonia" expression="row4.street2 " type="id_String"/>
+        <mapperTableEntries name="colonia" expression="row4.street2 +&quot;&quot;" type="id_String"/>
         <mapperTableEntries name="domicilio" expression="row4.street " type="id_String"/>
         <mapperTableEntries name="cp" expression="row4.zip +&quot;&quot;" type="id_String"/>
-        <mapperTableEntries name="lat" expression="new BigDecimal(0)" type="id_BigDecimal"/>
-        <mapperTableEntries name="lon" expression="new BigDecimal(0)" type="id_BigDecimal"/>
+        <mapperTableEntries name="lat" expression="row4.partner_latitude " type="id_BigDecimal"/>
+        <mapperTableEntries name="lon" expression="row4.partner_longitude " type="id_BigDecimal"/>
         <mapperTableEntries name="radio" expression="100" type="id_Integer"/>
         <mapperTableEntries name="nombre" expression="row4.display_name " type="id_String"/>
         <mapperTableEntries name="contacto" expression="row4.comment +&quot;&quot;" type="id_String"/>
@@ -1030,6 +981,8 @@
         <mapperTableEntries name="zip" type="id_String" nullable="true"/>
         <mapperTableEntries name="write_uid" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="write_date" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="partner_latitude" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="partner_longitude" type="id_BigDecimal" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -1356,7 +1309,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;route_order\&quot;.\&quot;id\&quot;, &#xA;  \&quot;route_order\&quot;.\&quot;name\&quot;, &#xA;  \&quot;route_order\&quot;.\&quot;partner_id\&quot;, &#xA;  \&quot;route_order\&quot;.\&quot;partner_shipping_id\&quot;, &#xA;  \&quot;route_order\&quot;.\&quot;priority\&quot;, &#xA;  \&quot;route_order\&quot;.\&quot;date_order\&quot;, &#xA;  \&quot;route_order\&quot;.\&quot;manage_id\&quot;, &#xA;  \&quot;route_order\&quot;.\&quot;comentary\&quot;, &#xA;  \&quot;route_order\&quot;.\&quot;create_uid\&quot;, &#xA;  \&quot;route_order\&quot;.\&quot;create_date\&quot;, &#xA;  \&quot;route_order\&quot;.\&quot;write_uid\&quot;, &#xA;  \&quot;route_order\&quot;.\&quot;write_date\&quot;, &#xA;  \&quot;route_order\&quot;.\&quot;state\&quot;&#xA;FROM \&quot;route_order\&quot; where state='0' &quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA; id, &#xA; name, &#xA; partner_id, &#xA; partner_shipping_id, &#xA; priority, &#xA; date_order, &#xA; manage_id, &#xA; comentary, &#xA; create_uid, &#xA; create_date, &#xA; write_uid, &#xA; write_date, &#xA; state&#xA;FROM route_order   where state='0' OR state='6'  &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1996,7 +1949,7 @@
       <additionalProperties key="Comment" value="route.order"/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="832">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_2" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -2104,7 +2057,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="832">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_7" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -2430,7 +2383,7 @@
         <mapperTableEntries name="amount_tax" expression="row8.amount_tax " type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="amount_total" expression="row8.amount_total " type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="payment_term_id" expression="1" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="fiscal_position_id" expression="1" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="fiscal_position_id" expression="2" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="company_id" expression="1" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="team_id" expression="1" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="message_last_post" expression="" type="id_Date" nullable="true"/>
@@ -2479,7 +2432,7 @@
         <mapperTableEntries name="amount_tax" expression="row8.amount_tax" type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="amount_total" expression="row8.amount_total" type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="payment_term_id" expression="1" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="fiscal_position_id" expression="1" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="fiscal_position_id" expression="2" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="company_id" expression="1" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="team_id" expression="1" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="message_last_post" expression="" type="id_Date" nullable="true"/>
@@ -2533,7 +2486,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="832">
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_2" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -3096,7 +3049,7 @@
       <additionalProperties key="Comment" value="Quotation"/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="928">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="992">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_3" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -3162,7 +3115,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="928">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="992">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_8" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -3174,132 +3127,6 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="sale_order_line" name="sale_order_line">
-      <column comment="" defaultValue="nextval('sale_order_line_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="Order Reference" key="false" length="10" name="order_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Order Reference"/>
-      </column>
-      <column comment="Description" key="false" length="2147483647" name="name" nullable="false" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Description"/>
-      </column>
-      <column comment="Sequence" key="false" length="10" name="sequence" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Sequence"/>
-      </column>
-      <column comment="Invoice Status" key="false" length="2147483647" name="invoice_status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Invoice Status"/>
-      </column>
-      <column comment="Unit Price" key="false" length="131089" name="price_unit" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Unit Price"/>
-      </column>
-      <column comment="Subtotal" key="false" length="131089" name="price_subtotal" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Subtotal"/>
-      </column>
-      <column comment="Taxes" key="false" length="131089" name="price_tax" nullable="true" pattern="" precision="17" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Taxes"/>
-      </column>
-      <column comment="Total" key="false" length="131089" name="price_total" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Total"/>
-      </column>
-      <column comment="Price Reduce" key="false" length="131089" name="price_reduce" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Price Reduce"/>
-      </column>
-      <column comment="Price Reduce Tax inc" key="false" length="131089" name="price_reduce_taxinc" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Price Reduce Tax inc"/>
-      </column>
-      <column comment="Price Reduce Tax excl" key="false" length="131089" name="price_reduce_taxexcl" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Price Reduce Tax excl"/>
-      </column>
-      <column comment="Discount (%)" key="false" length="131089" name="discount" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Discount (%)"/>
-      </column>
-      <column comment="Product" key="false" length="10" name="product_id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Product"/>
-      </column>
-      <column comment="Quantity" key="false" length="131089" name="product_uom_qty" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Quantity"/>
-      </column>
-      <column comment="Unit of Measure" key="false" length="10" name="product_uom" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Unit of Measure"/>
-      </column>
-      <column comment="Delivered" key="false" length="131089" name="qty_delivered" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Delivered"/>
-      </column>
-      <column comment="To Invoice" key="false" length="131089" name="qty_to_invoice" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="To Invoice"/>
-      </column>
-      <column comment="Invoiced" key="false" length="131089" name="qty_invoiced" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Invoiced"/>
-      </column>
-      <column comment="Salesperson" key="false" length="10" name="salesman_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Salesperson"/>
-      </column>
-      <column comment="Currency" key="false" length="10" name="currency_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Currency"/>
-      </column>
-      <column comment="Company" key="false" length="10" name="company_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Company"/>
-      </column>
-      <column comment="Customer" key="false" length="10" name="order_partner_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Customer"/>
-      </column>
-      <column comment="Is a down payment" key="false" length="1" name="is_downpayment" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
-        <additionalField key="Comment" value="Is a down payment"/>
-      </column>
-      <column comment="Order Status" key="false" length="2147483647" name="state" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-        <additionalField key="Comment" value="Order Status"/>
-      </column>
-      <column comment="Delivery Lead Time" key="false" length="17" name="customer_lead" nullable="false" pattern="" precision="17" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value="Delivery Lead Time"/>
-      </column>
-      <column comment="Amount To Invoice" key="false" length="131089" name="amt_to_invoice" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Amount To Invoice"/>
-      </column>
-      <column comment="Amount Invoiced" key="false" length="131089" name="amt_invoiced" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
-        <additionalField key="Comment" value="Amount Invoiced"/>
-      </column>
-      <column comment="Section" key="false" length="10" name="layout_category_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Section"/>
-      </column>
-      <column comment="Layout Sequence" key="false" length="10" name="layout_category_sequence" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Layout Sequence"/>
-      </column>
-      <column comment="Created by" key="false" length="10" name="create_uid" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Created by"/>
-      </column>
-      <column comment="Created on" key="false" length="29" name="create_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Created on"/>
-      </column>
-      <column comment="Last Updated by" key="false" length="10" name="write_uid" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Last Updated by"/>
-      </column>
-      <column comment="Last Updated on" key="false" length="29" name="write_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="Last Updated on"/>
-      </column>
-      <column comment="Package" key="false" length="10" name="product_packaging" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Package"/>
-      </column>
-      <column comment="Route" key="false" length="10" name="route_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Route"/>
-      </column>
-      <column comment="Is a program reward line" key="false" length="1" name="is_reward_line" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
-        <additionalField key="Comment" value="Is a program reward line"/>
-      </column>
-      <column comment="Is a Delivery" key="false" length="1" name="is_delivery" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
-        <additionalField key="Comment" value="Is a Delivery"/>
-      </column>
-      <column comment="Is a Promotion" key="false" length="1" name="is_promotion" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
-        <additionalField key="Comment" value="Is a Promotion"/>
-      </column>
-      <column comment="Promotion Amount" key="false" length="17" name="promotion_price" nullable="true" pattern="" precision="17" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value="Promotion Amount"/>
-      </column>
-      <column comment="Is a Free Promotion Product" key="false" length="1" name="promotion_product" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
-        <additionalField key="Comment" value="Is a Free Promotion Product"/>
-      </column>
-      <additionalProperties key="Comment" value="Sales Order Line"/>
-    </metadata>
     <metadata connector="FLOW" label="sale_order_line" name="order_line">
       <column comment="" defaultValue="nextval('sale_order_line_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
@@ -3423,53 +3250,10 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="sale_order_line">
-        <mapperTableEntries name="id" expression="row9.id" type="id_Integer"/>
-        <mapperTableEntries name="order_id" expression="row9.id_reporte " type="id_Integer"/>
-        <mapperTableEntries name="name" expression="row9.descripcion " type="id_String"/>
-        <mapperTableEntries name="sequence" expression="0" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="invoice_status" expression="&quot;no&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="price_unit" expression="row9.precio_unitario " type="id_BigDecimal"/>
-        <mapperTableEntries name="price_subtotal" expression="row9.precio_unitario " type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="price_tax" expression="row9.precio_unitario.multiply(new BigDecimal(&quot;.16&quot;))" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="price_total" expression="row9.precio_unitario.multiply(new BigDecimal(row9.cantidad)) " type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="price_reduce" expression="row9.precio_unitario " type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="price_reduce_taxinc" expression="row9.precio_unitario.add(row9.precio_unitario.multiply(new BigDecimal(&quot;.16&quot;))) " type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="price_reduce_taxexcl" expression="row9.precio_unitario " type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="discount" expression="new BigDecimal(&quot;0&quot;)" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="product_id" expression="row10.id " type="id_Integer"/>
-        <mapperTableEntries name="product_uom_qty" expression="new BigDecimal(row9.cantidad) " type="id_BigDecimal"/>
-        <mapperTableEntries name="product_uom" expression="row10.uom_id " type="id_Integer"/>
-        <mapperTableEntries name="qty_delivered" expression="new BigDecimal(&quot;0&quot;)" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="qty_to_invoice" expression="new BigDecimal(&quot;0&quot;)" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="qty_invoiced" expression="new BigDecimal(&quot;0&quot;)" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="salesman_id" expression="1" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="currency_id" expression="34" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="company_id" expression="row10.company_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="order_partner_id" expression="row11.id_cliente " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="is_downpayment" expression="false" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="state" expression="&quot;draft&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="customer_lead" expression="1" type="id_Double"/>
-        <mapperTableEntries name="amt_to_invoice" expression="new BigDecimal(&quot;0&quot;)" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="amt_invoiced" expression="new BigDecimal(&quot;0&quot;)" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="layout_category_id" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="layout_category_sequence" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="create_uid" expression="row10.create_uid" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="create_date" expression="row10.create_date" type="id_Date" nullable="true"/>
-        <mapperTableEntries name="write_uid" expression="row10.write_uid" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="write_date" expression="row10.write_date" type="id_Date" nullable="true"/>
-        <mapperTableEntries name="product_packaging" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="route_id" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="is_reward_line" expression="false" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="is_delivery" expression="false" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="is_promotion" expression="false" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="promotion_price" expression="" type="id_Double" nullable="true"/>
-        <mapperTableEntries name="promotion_product" expression="false" type="id_Boolean" nullable="true"/>
-      </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="order_line">
         <mapperTableEntries name="id" expression="row9.id" type="id_Integer"/>
         <mapperTableEntries name="order_id" expression="row9.id_reporte " type="id_Integer"/>
-        <mapperTableEntries name="name" expression="row10.name" type="id_String"/>
+        <mapperTableEntries name="name" expression="row10.name+  row10.description + &quot; &quot;" type="id_String"/>
         <mapperTableEntries name="sequence" expression="row10.sequence" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="invoice_status" expression="&quot;no&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="price_unit" expression="row9.precio_unitario " type="id_BigDecimal"/>
@@ -3480,7 +3264,7 @@
         <mapperTableEntries name="price_reduce_taxinc" expression="row9.precio_unitario.add(row9.precio_unitario.multiply(new BigDecimal(&quot;.16&quot;))) " type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="price_reduce_taxexcl" type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="discount" expression="new BigDecimal(&quot;0&quot;)" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="product_id" expression="row10.id " type="id_Integer"/>
+        <mapperTableEntries name="product_id" expression="row9.id_producto " type="id_Integer"/>
         <mapperTableEntries name="product_uom_qty" expression="new BigDecimal(row9.cantidad) " type="id_BigDecimal"/>
         <mapperTableEntries name="product_uom" expression="row10.uom_id " type="id_Integer"/>
         <mapperTableEntries name="qty_delivered" expression="new BigDecimal(&quot;0&quot;)" type="id_BigDecimal" nullable="true"/>
@@ -3604,7 +3388,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="1024">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="1088">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_4" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -3701,7 +3485,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="1024">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="1088">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_5" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -3810,7 +3594,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="1024">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="1088">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_6" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -4055,7 +3839,7 @@
       <additionalProperties key="Comment" value="Product Template"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="928">
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="992">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_4" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -4532,7 +4316,7 @@
       <additionalProperties key="Comment" value="Sales Order Line"/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1120">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1184">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_6" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -4640,7 +4424,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1120">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1184">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_9" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -4700,7 +4484,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="1120">
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="1184">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_5" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -4782,8 +4566,9 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1312">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1408">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_7" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
@@ -4999,8 +4784,9 @@
       <additionalProperties key="Comment" value="Transfer"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1312">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1408">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_10" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -5131,8 +4917,9 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="1312">
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="1408">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_6" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -5380,8 +5167,9 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1408">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1504">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_8" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
@@ -5597,8 +5385,9 @@
       <additionalProperties key="Comment" value="Transfer"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1408">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1504">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_11" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -5774,8 +5563,9 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="1408">
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="1504">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_10" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -5935,8 +5725,9 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1504">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1600">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_9" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
@@ -6200,8 +5991,9 @@
       <additionalProperties key="Comment" value="Stock Move"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1504">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1600">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_12" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -6379,8 +6171,9 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="1504">
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="1600">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_8" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -6496,8 +6289,9 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1600">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="1696">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_8" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
@@ -6605,8 +6399,9 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1600">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="1696">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
@@ -6996,7 +6791,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;name\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;active\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;address_home_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;country_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;gender\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;marital\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;birthday\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;ssnid\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;sinid\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;identification_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;passport_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;bank_account_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;permit_no\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;visa_no\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;visa_expire\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;address_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;work_phone\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;mobile_phone\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;work_email\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;work_location\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;job_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;department_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;parent_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;coach_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;notes\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;color\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;resource_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;message_last_post\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;company_id\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;create_uid\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;create_date\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;write_uid\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;write_date\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;manager\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;medic_exam\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;place_of_birth\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;children\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;vehicle\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;vehicle_distance\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;password\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;id_supervisor\&quot;, &#xA;  \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;.\&quot;clave_usuario_rol\&quot;&#xA;FROM \&quot;LATAF01\&quot;.\&quot;public\&quot;.\&quot;lx_employee\&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  id, &#xA;  name, &#xA;  active, &#xA;  address_home_id, &#xA;  country_id, &#xA;  gender, &#xA;  marital, &#xA;  birthday, &#xA;  ssnid, &#xA;  sinid, &#xA;  identification_id, &#xA;  passport_id, &#xA;  bank_account_id, &#xA;  permit_no, &#xA;  visa_no, &#xA;  visa_expire, &#xA;  address_id, &#xA;  work_phone, &#xA;  mobile_phone, &#xA;  work_email, &#xA;  work_location, &#xA;  job_id, &#xA;  department_id, &#xA;  parent_id, &#xA;  coach_id, &#xA;  notes, &#xA;  color, &#xA;  resource_id, &#xA;  message_last_post, &#xA;  company_id, &#xA;  create_uid, &#xA;  create_date, &#xA;  write_uid, &#xA;  write_date, &#xA;  manager, &#xA;  medic_exam, &#xA;  place_of_birth, &#xA;  children, &#xA;  vehicle, &#xA;  vehicle_distance, &#xA;  password, &#xA;  id_supervisor, &#xA;  clave_usuario_rol&#xA;FROM lx_employee&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -7284,7 +7079,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="usuario">
         <mapperTableEntries name="id" expression="row5.id " type="id_Integer"/>
@@ -7292,7 +7087,7 @@
         <mapperTableEntries name="nombre" expression="row5.name " type="id_String"/>
         <mapperTableEntries name="email" expression="row5.work_email" type="id_String"/>
         <mapperTableEntries name="password" expression="row5.password " type="id_String"/>
-        <mapperTableEntries name="clave_usuario_rol" expression="row5.clave_usuario_rol" type="id_String"/>
+        <mapperTableEntries name="clave_usuario_rol" expression="row5.clave_usuario_rol " type="id_String"/>
         <mapperTableEntries name="id_supervisor" expression="row5.id_supervisor" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="active" expression="&quot;1&quot;" type="id_Object"/>
         <mapperTableEntries name="id_inactive_reason" expression="" type="id_Integer" nullable="true"/>
@@ -7544,17 +7339,15 @@
   </node>
   <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_4" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_gk7T4I6tEee1LJJOaIBo0Q" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;127.0.0.1&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.odoohost"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5932&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;LATAF01&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="context.odooport"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.odoodb"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;odoo&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="context.odoouser"/>
     <elementParameter field="PASSWORD" name="PASS" value="O7UO/DWZIlA="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_gk7T4I6tEee1LJJOaIBo0Q - route_order" show="false"/>
@@ -7563,7 +7356,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  id, &#xA;  name, &#xA;  partner_id, &#xA;  partner_shipping_id, &#xA;  priority, &#xA;  date_order, &#xA;  manage_id, &#xA;  comentary, &#xA;  create_uid, &#xA;  create_date, &#xA;  write_uid, &#xA;  write_date, &#xA;  state&#xA;FROM route_order  where state='0' OR state='6'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  id, &#xA;  name, &#xA;  partner_id, &#xA;  partner_shipping_id, &#xA;  priority, &#xA;  date_order, &#xA;  manage_id, &#xA;  comentary, &#xA;  create_uid, &#xA;  create_date, &#xA;  write_uid, &#xA;  write_date, &#xA;  state&#xA;FROM route_order  where state='0' OR state='6' &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -8017,6 +7810,17 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tPostgresqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_2" target="tMap_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="partner_latitude"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="partner_longitude"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="pricelist"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
@@ -8028,6 +7832,14 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="cliente2" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tPostgresqlInput_3" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_3" target="tMap_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="partner_latitude"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="partner_longitude"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
   </connection>
@@ -8038,12 +7850,12 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="direccion" show="false"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_5" target="tMysqlInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
+  </connection>
   <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tPostgresqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_5" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_5" target="tMysqlInput_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="copyOfagenda" lineStyle="0" metaname="copyOfagenda" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tMysqlOutput_7">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -8071,12 +7883,12 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="order1" show="false"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMysqlInput_3" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_3" target="tMysqlInput_6">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk10" show="false"/>
-  </connection>
   <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tMysqlInput_3" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_3" target="tMap_8">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMysqlInput_3" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_3" target="tMysqlInput_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk10" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="order_line" lineStyle="0" metaname="order_line" offsetLabelX="0" offsetLabelY="0" source="tMap_8" target="tPostgresqlOutput_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -8099,6 +7911,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMysqlInput_6" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_6" target="tPostgresqlInput_7">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk11" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="sync" lineStyle="0" metaname="sync" offsetLabelX="0" offsetLabelY="0" source="tMap_9" target="tMysqlOutput_5">
@@ -8107,40 +7920,50 @@
   </connection>
   <connection connectorName="FLOW" label="row14" lineStyle="0" metaname="tPostgresqlInput_7" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_7" target="tMap_10">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row14" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlInput_7" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_7" target="tPostgresqlInput_8">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk12" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="orden_entrega" lineStyle="0" metaname="orden_entrega" offsetLabelX="0" offsetLabelY="0" source="tMap_10" target="tMysqlOutput_6">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="orden_entrega" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tPostgresqlInput_8" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_8" target="tMap_11">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlInput_8" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_8" target="tPostgresqlInput_9">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk13" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="copyOfentrega_agenda" lineStyle="0" metaname="copyOfentrega_agenda" offsetLabelX="0" offsetLabelY="0" source="tMap_11" target="tMysqlOutput_10">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="copyOfentrega_agenda" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="tPostgresqlInput_9" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_9" target="tMap_12">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row16" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="entrega_lineas" lineStyle="0" metaname="entrega_lineas" offsetLabelX="0" offsetLabelY="0" source="tMap_12" target="tMysqlOutput_8">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="entrega_lineas" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row18" lineStyle="8" metaname="tMysqlInput_8" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_8" target="tMap_12">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row18" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="8" metaname="tPostgresqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_1" target="tMap_12">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tPostgresqlInput_11" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_11" target="tMap_5">
